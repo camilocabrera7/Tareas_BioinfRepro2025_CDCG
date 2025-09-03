@@ -14,7 +14,8 @@ El siguiente repositorio de mi autoría Camilo Cabrera García, estudiante del c
 ### **Ejercicios:**
 ------------ 
 1. Abre el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
-   * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20%20the%20environment.md).**
+   * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20%20the%20environment.md).** Y se ve así en MarkText: ![PTE formateado](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)
+   * Y se ve el código igualmente de la siguiente **[forma](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png): ![PTE codigo](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png)
     
 2. Clona el repositorio de la clase y actualízalo que vez que sea necesario. NOTAS IMPORTANTES PARA ESTE EJERCICIO:
   * Clonalo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil
@@ -22,10 +23,13 @@ El siguiente repositorio de mi autoría Camilo Cabrera García, estudiante del c
   * Modifica la página de esta sesion en tu copia local, inclyebdo tus datos (nombre y fecha de modificacón).
   * Realiza un comit de tus cambios.
   * Toma un pantallazo de la página modificada (en un editor de Markdown) y del teminar luego de ejecuta $ git status incluye esos pantallazos con respectivas explicaciones de qué muestran en la página de las tadea para la Sesión en tu respositorio personal.
-  * La pagina modificada es la **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown.png),** y el pantallazo del commit es **[este](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png).**
+  * La pagina modificada es la **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png),** se observa así: ![EditMarkDown](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png)
+  * En el caso de la versión de código se ve **[así:](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)** ![EditMarkDownCod](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)
+  * Y el pantallazo del commit es **[este:](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png).** ![Commit](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)
+  * Donde se observan los cambios realizados en la copia local del directorio de la pagina y un archivo agregado.
 
 3. Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2025_TusIniciales". Agregame a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usaiurio es "ravuch"
-  * El repositorio es el que se encuentra leyendo actualmente
+  * El repositorio es el que se encuentra leyendo **[actualmente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/tree/main)**.
 
 4. Mira el siguiente script ([tomado del manual de Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#phand)) y contesta lo siguiente:
 ```
@@ -93,7 +97,7 @@ populations -t 36 -b 1 -P $src/stacks/ -M $src/popmap \
   * ¿Si quisieras correr este script y que funcionara en tu propio equipo, qué línea deberías cambiar y a qué?
 ```
 src=$HOME/research/project # Es el directorio de trabajo donde corría el script inicialmente
-src=/root/BioInfCDCG/proyecto # Directorio de mi computador donde correría el script si quiesiera que funcionase en mi equipo
+src=/root/BioInfCDCG/proyecto # Directorio de mi computador donde correría el script si quisiera que funcionase en mi equipo
 ```
   * ¿A qué equivale `$HOME`? **Respuesta**: Se trata de una variable entorno que representa el directorio de inicio del usuario en Unix (Linux)
   * ¿Qué paso del análisis hace el programa `gsnap`? **Respuesta**: GSNAP realiza el alineamiento (mapeo) de las lecturas de secuenciación (archivos .fq) contra un genoma de referencia, produciendo archivos en formato SAM.
@@ -110,7 +114,7 @@ src=/root/BioInfCDCG/proyecto # Directorio de mi computador donde correría el s
 #!/bin/bash
 # Alineamiento con GSnap y conversión a BAM
 
-src=$HOME/research/project
+src=/root/BioInfCDCG/proyecto
 
 files="sample_01
 sample_02
@@ -131,7 +135,7 @@ done
 #!/bin/bash
 # Ejecutar pstacks en todas las muestras
 
-src=$HOME/research/project
+src=/root/BioInfCDCG/proyecto
 
 files="sample_01
 sample_02
@@ -151,7 +155,7 @@ done
 #!/bin/bash
 # Construir catálogo con cstacks
 
-src=$HOME/research/project
+src=/root/BioInfCDCG/proyecto
 
 files="sample_01
 sample_02
@@ -170,7 +174,7 @@ cstacks -g -p 36 -b 1 -n 1 -o $src/stacks $samp &>> $src/stacks/Log
 #!/bin/bash
 # Ejecutar sstacks en todas las muestras
 
-src=$HOME/research/project
+src=/root/BioInfCDCG/proyecto
 
 files="sample_01
 sample_02
@@ -188,7 +192,7 @@ done
 #!/bin/bash
 # Calcular estadísticas poblacionales
 
-src=$HOME/research/project
+src=/root/BioInfCDCG/proyecto
 
 populations -t 36 -b 1 -P $src/stacks/ -M $src/popmap \
               -p 9 -f p_value -k -r 0.75 -s --structure --phylip --genepop
