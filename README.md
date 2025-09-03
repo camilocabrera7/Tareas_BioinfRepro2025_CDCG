@@ -14,22 +14,29 @@ El siguiente repositorio de mi autoría Camilo Cabrera García, estudiante del c
 ### **Ejercicios:**
 ------------ 
 1. Abre el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
-   * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20%20the%20environment.md).** Y se ve así en MarkText: ![PTE formateado](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)
-   * Y se ve el código igualmente de la siguiente **[forma](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png): ![PTE codigo](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png)
+   * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20%20the%20environment.md).** Tal como se ve en la *[Figura 1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)* ![PTE formateado](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)
+     * *Figura 1: Tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) en editor de texto Markdown, texto formateado.*
+
+   * Y se ve el código igualmente en la *[Figura 2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png) ![PTE codigo](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png)*
+     * *Figura 2: Tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) en editor de texto Markdown, texto en codigo.*
     
 2. Clona el repositorio de la clase y actualízalo que vez que sea necesario. NOTAS IMPORTANTES PARA ESTE EJERCICIO:
-  * Clonalo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil
-  * Como mi repo tiene más de una rama, necesitarás agregar a tu git clone lo siguiente: --branch master --single-branch.
-  * Modifica la página de esta sesion en tu copia local, inclyebdo tus datos (nombre y fecha de modificacón).
-  * Realiza un comit de tus cambios.
-  * Toma un pantallazo de la página modificada (en un editor de Markdown) y del teminar luego de ejecuta $ git status incluye esos pantallazos con respectivas explicaciones de qué muestran en la página de las tadea para la Sesión en tu respositorio personal.
-  * La pagina modificada es la **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png),** se observa así: ![EditMarkDown](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png)
-  * En el caso de la versión de código se ve **[así:](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)** ![EditMarkDownCod](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)
-  * Y el pantallazo del commit es **[este:](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png).** ![Commit](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)
-  * Donde se observan los cambios realizados en la copia local del directorio de la pagina y un archivo agregado.
+   * Clonalo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil
+   * Como mi repo tiene más de una rama, necesitarás agregar a tu git clone lo siguiente: --branch master --single-branch.
+   * Modifica la página de esta sesion en tu copia local, inclyebdo tus datos (nombre y fecha de modificacón).
+   * Realiza un comit de tus cambios.
+   * Toma un pantallazo de la página modificada (en un editor de Markdown) y del teminar luego de ejecuta $ git status incluye esos pantallazos con respectivas explicaciones de qué muestran en la página de las tadea para la Sesión en tu respositorio personal.
+   * La pagina modificada se puede observar en la *[Figura 3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png) ![EditMarkDown](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png)*
+     * *Figura 3: Modificación del archivo "Sesion2_Organización_proyecto_bioinf.md" del repositorio clonado de forma local, texto formateado.*
+
+   * En el caso de la versión de código se ve en la *[Figura 4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)* ![EditMarkDownCod](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)
+     * *Figura 4: Modificación del archivo "Sesion2_Organización_proyecto_bioinf.md" del repositorio clonado de forma local, texto en codigo.*
+   
+   * Y el pantallazo del commit se ve en la *[Figura 5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)* ![Commit](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)
+     * *Figura 5: Cambios realizados en la copia local del directorio de la pagina y un archivo agregado "ejercicio2.txt".*   
 
 3. Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2025_TusIniciales". Agregame a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usaiurio es "ravuch"
-  * El repositorio es el que se encuentra leyendo **[actualmente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/tree/main)**.
+   * El repositorio es el que se encuentra leyendo **[actualmente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/tree/main)**.
 
 4. Mira el siguiente script ([tomado del manual de Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#phand)) y contesta lo siguiente:
 ```
@@ -93,15 +100,16 @@ done
 populations -t 36 -b 1 -P $src/stacks/ -M $src/popmap \
               -p 9 -f p_value -k -r 0.75 -s --structure --phylip --genepop
 ```
-  * ¿Cuántos pasos tiene este script? **Respuesta**: Tiene 5 pasos el script
-  * ¿Si quisieras correr este script y que funcionara en tu propio equipo, qué línea deberías cambiar y a qué?
+
+   * ¿Cuántos pasos tiene este script? **Respuesta**: Tiene 5 pasos el script
+   * ¿Si quisieras correr este script y que funcionara en tu propio equipo, qué línea deberías cambiar y a qué?
 ```
 src=$HOME/research/project # Es el directorio de trabajo donde corría el script inicialmente
 src=/root/BioInfCDCG/proyecto # Directorio de mi computador donde correría el script si quisiera que funcionase en mi equipo
 ```
-  * ¿A qué equivale `$HOME`? **Respuesta**: Se trata de una variable entorno que representa el directorio de inicio del usuario en Unix (Linux)
-  * ¿Qué paso del análisis hace el programa `gsnap`? **Respuesta**: GSNAP realiza el alineamiento (mapeo) de las lecturas de secuenciación (archivos .fq) contra un genoma de referencia, produciendo archivos en formato SAM.
-  * ¿Qué hace en términos generales cada uno de los loops?
+   * ¿A qué equivale `$HOME`? **Respuesta**: Se trata de una variable entorno que representa el directorio de inicio del usuario en Unix (Linux)
+   * ¿Qué paso del análisis hace el programa `gsnap`? **Respuesta**: GSNAP realiza el alineamiento (mapeo) de las lecturas de secuenciación (archivos .fq) contra un genoma de referencia, produciendo archivos en formato SAM.
+   * ¿Qué hace en términos generales cada uno de los loops?
      * *Primer loop*: Para cada muestra, ejecuta GSNAP (alineamiento) y samtools (conversión SAM→BAM)
      * *Segundo loop*: Ejecuta pstacks para cada archivo BAM (detección de loci)
      * *Tercer loop*: Construye parámetros para cstacks concatenando rutas de muestras
@@ -109,7 +117,7 @@ src=/root/BioInfCDCG/proyecto # Directorio de mi computador donde correría el s
     
 5. Retoma el ejercicio anterior y divídelo en un subscript para cada paso y un script maestro que corra toda la pipeline.
 
-  * **Subscript 1: Alineamiento con GSnap (1_align_gsnap.sh)**
+* **Subscript 1: Alineamiento con GSnap (1_align_gsnap.sh)**
 ```
 #!/bin/bash
 # Alineamiento con GSnap y conversión a BAM
@@ -130,7 +138,7 @@ do
     rm $src/aligned/${file}.sam 
 done
 ```
-  * **Subscript 2: Ejecutar pstacks (2_run_pstacks.sh)**
+   * **Subscript 2: Ejecutar pstacks (2_run_pstacks.sh)**
 ```
 #!/bin/bash
 # Ejecutar pstacks en todas las muestras
@@ -150,7 +158,7 @@ do
     let "i+=1"; 
 done
 ```
-  * **Subscript 3: Construir lista con cstacks (3_run_cstacks.sh)**
+   * **Subscript 3: Construir lista con cstacks (3_run_cstacks.sh)**
 ```
 #!/bin/bash
 # Construir catálogo con cstacks
@@ -169,7 +177,7 @@ done
 
 cstacks -g -p 36 -b 1 -n 1 -o $src/stacks $samp &>> $src/stacks/Log
 ```
-  * **Subscript 4: Ejecutar sstacks (4_run_sstacks.sh)**
+   * **Subscript 4: Ejecutar sstacks (4_run_sstacks.sh)**
 ```
 #!/bin/bash
 # Ejecutar sstacks en todas las muestras
@@ -187,7 +195,7 @@ do
              -o $src/stacks/ &>> $src/stacks/Log 
 done
 ```
-  * **Subscript 5: Ejecutar populations (5_run_populations.sh)**
+   * **Subscript 5: Ejecutar populations (5_run_populations.sh)**
 ```
 #!/bin/bash
 # Calcular estadísticas poblacionales
@@ -198,7 +206,7 @@ populations -t 36 -b 1 -P $src/stacks/ -M $src/popmap \
               -p 9 -f p_value -k -r 0.75 -s --structure --phylip --genepop
 ```
 
-  * **Script Maestro**
+   * **Script Maestro**
 ```
 #!/bin/bash
 
