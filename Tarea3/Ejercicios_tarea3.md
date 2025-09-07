@@ -1,0 +1,138 @@
+# **Tarea 3 Unidad 1 -Sesion 3**
+**Camilo Cabrera García**
+**07.09.2025**
+-------------------
+## **Ejercicio 1:**
+
+Crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 1]()![Fig1]()*
+```
+r
+
+var_log <- log10(50)
+var_suma <- var_log + 5
+var_suma
+```
+  * *Figura 1: Creación de variable de logaritmo base 10 en 50 sumado a 5 en consola de R.*
+## **Ejercicio 2:**
+
+Suma el número 2 a todos los números entre 1 y 150.
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 2]()![Fig2]()*
+```
+r
+
+suma <- 1:150 + 2
+suma
+```
+  * *Figura 2: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+
+## **Ejercicio 3:** 
+¿Cuántos números son mayores a 20 en el vector -13432:234?
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 3]()![Fig3]()*
+```
+r
+
+vect <- -13432:234
+conteo <- sum(vect>20)
+conteo
+```
+  * *Figura 3: Creación de variables para la determinación de numeros mayores a 20 entre -13432:234 en consola de R.*
+
+## **Ejercicio 4:** 
+
+Carga en R el archivo PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt y ponlo en un objeto de R llamado meta_maiz.
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 4]()![Fig4]()*
+```
+r
+
+meta_maiz <- read.delim(C:/Users/DREAMFYRE 5/Documents/maizteocintle_SNP50k_meta_extended.txt)
+```
+  * *Figura 4: Carga de archivo del practico y creación de objeto R llamado meta_maiz en consola de R.*
+
+## **Ejercicio 5:**
+
+Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la consola.
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 5]()![Fig5]()*
+```
+r
+
+for(i in 1:10){
+  print(35 / i)
+}
+```
+  * *Figura 5: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+
+Modifica el loop anterior para que haga las divisiones solo para los números nones (con un comando, NO con c(1,3,...)). Pista: next.
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 6]()![Fig6]()*
+```
+r
+
+for(i in 1:10){
+  if(i %% 2 == 0) next
+  print(35 / i)
+}
+```
+  * *Figura 6: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+
+Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop. Pista: el primer paso es crear un vector fuera del loop. 
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 7]()![Fig7]()*
+```
+r
+
+texto <- c()
+resultado <- c()
+for(i in 1:10){
+  if(i %% 2 == 0) next
+  texto <- c(texto, paste("resultado para", i))
+  resultado <- c(resultado, 35 / i)
+}
+df_result <- data.frame(texto,resultado)
+df_result
+```
+  * *Figura 7: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+
+## **Ejercicio 6:**
+Abre en RStudio el script PracUni1Ses3/mantel/bin/1.IBR_testing.r. Este script realiza un análisis de aislamiento por resistencia con Fst calculadas con ddRAD en Berberis alpina.
+Lee el código del script y determina:
+
+¿qué hacen los dos for loops del script?
+
+¿qué paquetes necesitas para correr el script?
+
+¿qué archivos necesitas para correr el script?
+
+## **Ejercicio 7:**
+Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha =4Neu.
+
+## **Ejercicio 8:**
+Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete vegan.
+
+## **Ejercicio 9:**
+Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
+(averigua cada punto con comandos de R. Recuerda comentar o tendrás 7 años de mala suerte en el lab)
+
+¿Qué tipo de objeto creamos al cargar la base?
+
+¿Cómo se ven las primeras 6 líneas del archivo?
+
+¿Cuántas muestras hay?
+
+¿De cuántos estados se tienen muestras?
+
+¿Cuántas muestras fueron colectadas antes de 1980?
+
+¿Cuántas muestras hay de cada raza?
+
+En promedio ¿a qué altitud fueron colectadas las muestras?
+
+¿Y a qué altitud máxima y mínima fueron colectadas?
+
+Crea una nueva df de datos sólo con las muestras de la raza Olotillo
+
+Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho
+
+Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
+
+Ejercicio: divídanse por equipos de 2-3 personas según su tipo de datos o análisis. Exploren los paquetes de CRAN y de Bioconductor. Compartan por el gitter el link a la página de descripción del paquete y mencionen brevemente por qué les parece útil.
+
+
