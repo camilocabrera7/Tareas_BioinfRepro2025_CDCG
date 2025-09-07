@@ -72,7 +72,7 @@ for(i in 1:10){
 ```
 ![Fig5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop1.png)
 
-  * *Figura 5: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+  * *Figura 5: Creación de loop que divida 35 entre secuencia de números del 1 al 10 en consola de R.*
 
 Modifica el loop anterior para que haga las divisiones solo para los números nones (con un comando, NO con c(1,3,...)). Pista: next.
   * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 6](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop2.png)*
@@ -86,7 +86,7 @@ for(i in 1:10){
 ```
 ![Fig6](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop2.png)
 
-  * *Figura 6: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+  * *Figura 6: Creación de loop que sólo divida 35 entre numeros nones en consola de R.*
 
 Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop. Pista: el primer paso es crear un vector fuera del loop. 
   * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 7](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/dataframe.png)*
@@ -105,18 +105,33 @@ df_result
 ```
 ![Fig7](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/dataframe.png)
 
-  * *Figura 7: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
+  * *Figura 7: Creación de loop para obtener un data frame de dos columnas con resultados para el loop descrito en la figura 6 en consola de R.*
 
 ## **Ejercicio 6:**
-Abre en RStudio el script PracUni1Ses3/mantel/bin/1.IBR_testing.r. Este script realiza un análisis de aislamiento por resistencia con Fst calculadas con ddRAD en Berberis alpina.
+Abre en RStudio el script `PracUni1Ses3/mantel/bin/1.IBR_testing.r`. Este script realiza un análisis de aislamiento por resistencia con Fst calculadas con ddRAD en Berberis alpina.
 Lee el código del script y determina:
 
-¿qué hacen los dos for loops del script?
+¿Qué hacen los dos for loops del script?
+  * **El primer loop realiza las siguientes acciones:**
 
-¿qué paquetes necesitas para correr el script?
+    * Itera sobre 13 diferentes superficies de resistencia (presente, modelos climáticos del LGM como ccsm y miroc, flat, y varias elevaciones de 1800 a 4000 metros)
+    * Para cada superficie, carga el archivo de resistencias generado por Circuitscape (.out files)
+    * Convierte las distancias efectivas en matrices organizadas según el orden de las poblaciones
+    * Calcula la media de las distancias efectivas por población
 
-¿qué archivos necesitas para correr el script?
+  * **El segundo loop hace las siguientes acciones:**
 
+    * Tests de Mantel entre la matriz de Fst linearizado y cada matriz de distancias efectivas
+    * 10,000 permutaciones para obtener valores p robustos
+    * Genera gráficos mostrando la relación entre distancia efectiva y diferenciación genética
+    * Compila resultados (p-valor, correlación r) en una tabla resumen
+    * Asigna dinámicamente los resultados a objetos con nombres como B.present y B.ccsm.
+
+¿Qué paquetes necesitas para correr el script?
+  * Se requiren 3 librerias `ade4`, `ggplo2`, y `sp`
+
+¿Qué archivos necesitas para correr el script?
+  * Se necesitas varios archivos para correr el script. Primero archivos de funcion `read.fst_summary_fix.R`, `read.effdist.R`, `DistPlot.R`, luego se requieren los siguientes archivos geográficos y genéticos `surveyed_mountains.tsv`, `BerSS.sumstats.tsv`, `BerSS.fst_summary.tsv`, `Balpina_focalpoints.txt`.
 ## **Ejercicio 7:**
 Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha =4Neu.
 
@@ -124,7 +139,7 @@ Escribe una función llamada calc.tetha que te permita calcular tetha dados Ne y
 Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete vegan.
 
 ## **Ejercicio 9:**
-Escribe un script que debe estar guardado en PracUni1Ses3/maices/bin y llamarse ExplorandoMaiz.R, que 1) cargue en R el archivo PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt y 2) responda lo siguiente.
+Escribe un script que debe estar guardado en `PracUni1Ses3/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `PPracUni1Ses3maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
 (averigua cada punto con comandos de R. Recuerda comentar o tendrás 7 años de mala suerte en el lab)
 
 ¿Qué tipo de objeto creamos al cargar la base?
@@ -149,6 +164,7 @@ Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y 
 
 Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
 
-Ejercicio: divídanse por equipos de 2-3 personas según su tipo de datos o análisis. Exploren los paquetes de CRAN y de Bioconductor. Compartan por el gitter el link a la página de descripción del paquete y mencionen brevemente por qué les parece útil.
+## **Ejercicio 10:** 
+Divídanse por equipos de 2-3 personas según su tipo de datos o análisis. Exploren los paquetes de CRAN y de Bioconductor. Compartan por el gitter el link a la página de descripción del paquete y mencionen brevemente por qué les parece útil.
 
 
