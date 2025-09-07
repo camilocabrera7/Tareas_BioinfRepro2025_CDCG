@@ -1,4 +1,6 @@
-## **Tarea 2**
+# **Tarea 2**
+**Camilo Cabrera García**
+**02.09.2025**
 ---------
 1. Realiza los ejercicios indicados en cada sección del tutorial de la Sesión 2 de la Unidad 2.
 2. Pon tus resultados en tu repositorio personal en GiHub, siguiendo las instrucciones del tutorial
@@ -6,16 +8,16 @@
 4. Para los ejercicios que son de la partes sobre Markdown, mostrar capturas de pantalla tanto de el código como del resultado formateado.
 5. Las figuras deben tener sus respectivas leyendas explicativas, un número de figura y debe estar citada en el texto.
 
-### **Ejercicios:**
+## **Ejercicios:**
 ------------ 
-1. Abre el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
+#### 1. Abre el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
    * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20%20the%20environment.md).** Tal como se ve en la *[Figura 1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)* ![PTE formateado](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)
      * *Figura 1: Tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) en editor de texto Markdown, texto formateado.*
 
    * Y se ve el código igualmente en la *[Figura 2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png) ![PTE codigo](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png)*
      * *Figura 2: Tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) en editor de texto Markdown, texto en codigo.*
     
-2. Clona el repositorio de la clase y actualízalo que vez que sea necesario. NOTAS IMPORTANTES PARA ESTE EJERCICIO:
+#### 2. Clona el repositorio de la clase y actualízalo que vez que sea necesario. NOTAS IMPORTANTES PARA ESTE EJERCICIO:
    * Clonalo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil
    * Como mi repo tiene más de una rama, necesitarás agregar a tu git clone lo siguiente: --branch master --single-branch.
    * Modifica la página de esta sesion en tu copia local, inclyebdo tus datos (nombre y fecha de modificacón).
@@ -30,10 +32,10 @@
    * Y el pantallazo del commit se ve en la *[Figura 5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)* ![Commit](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)
      * *Figura 5: Cambios realizados en la copia local del directorio de la pagina y un archivo agregado "ejercicio2.txt".*   
 
-3. Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2025_TusIniciales". Agregame a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usaiurio es "ravuch"
+#### 3. Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2025_TusIniciales". Agregame a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usaiurio es "ravuch"
    * El repositorio es el que se encuentra leyendo **[actualmente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/tree/main)**.
 
-4. Mira el siguiente script ([tomado del manual de Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#phand)) y contesta lo siguiente:
+#### 4. Mira el siguiente script ([tomado del manual de Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#phand)) y contesta lo siguiente:
 ```
 #!/bin/bash 
 
@@ -110,7 +112,7 @@ src=/root/BioInfCDCG/proyecto # Directorio de mi computador donde correría el s
      * *Tercer loop*: Construye parámetros para cstacks concatenando rutas de muestras
      * *Cuarto loop*: Ejecuta sstacks para comparar cada muestra contra el catálogo
     
-5. Retoma el ejercicio anterior y divídelo en un subscript para cada paso y un script maestro que corra toda la pipeline.
+#### 5. Retoma el ejercicio anterior y divídelo en un subscript para cada paso y un script maestro que corra toda la pipeline.
 
 * **Subscript 1: Alineamiento con GSnap (1_align_gsnap.sh)**
 ```
