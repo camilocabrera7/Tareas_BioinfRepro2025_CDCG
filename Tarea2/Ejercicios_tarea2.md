@@ -2,11 +2,11 @@
 **Camilo Cabrera García**
 **02.09.2025**
 ---------
-1. Realiza los ejercicios indicados en cada sección del tutorial de la Sesión 2 de la Unidad 2.
-2. Pon tus resultados en tu repositorio personal en GiHub, siguiendo las instrucciones del tutorial
-3. Organiza tu repositorio según los lineamientos del tutorial. Cada avance semanal debe tener su propia página en Markdown donde se indiquen cuáles eran los ejercicios a realizar y los resultados obtenidos.
-4. Para los ejercicios que son de la partes sobre Markdown, mostrar capturas de pantalla tanto de el código como del resultado formateado.
-5. Las figuras deben tener sus respectivas leyendas explicativas, un número de figura y debe estar citada en el texto.
+Realiza los ejercicios indicados en cada sección del tutorial de la Sesión 2 de la Unidad 2.
+  * Pon tus resultados en tu repositorio personal en GiHub, siguiendo las instrucciones del tutorial
+  * Organiza tu repositorio según los lineamientos del tutorial. Cada avance semanal debe tener su propia página en Markdown donde se indiquen cuáles eran los ejercicios a realizar y los resultados obtenidos.
+  * Para los ejercicios que son de la partes sobre Markdown, mostrar capturas de pantalla tanto de el código como del resultado formateado.
+  * Las figuras deben tener sus respectivas leyendas explicativas, un número de figura y debe estar citada en el texto.
 
 ## **Ejercicio 1:**
 
