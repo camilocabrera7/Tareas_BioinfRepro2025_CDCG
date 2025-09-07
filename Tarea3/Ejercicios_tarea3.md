@@ -2,6 +2,8 @@
 **Camilo Cabrera García**
 **07.09.2025**
 -------------------
+Revisar el tutorial de la Sesión 3 de la Unidad y resolver sus ejercicios. Poner todo en un Markdown específico para esta tarea en sus repositorios. Recuerden que la página de inicio de sus repositorios debe tener un README, describiendo el repositorio, y que este debe tener links a las tareas de cada semana. Organizar el material de cada semana en su propia carpeta, tal como está organizado el repositorio del curso.
+
 ## **Ejercicio 1:**
 
 Crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
