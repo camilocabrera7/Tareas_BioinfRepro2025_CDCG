@@ -1,6 +1,11 @@
 # Tarea 1 Unidad 1 -Sesión 1
 Camilo Cabrera Garcia 25.08.2025
 --------------------------------
+Realizar los ejercicios que figuran al final del tutorial de la Sesión 1 de la Unidad 1:
+  * Escribe una línea de código que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad1/Sesion1/Prac_Uni1/Maiz/nuevos_final.fam`.
+  * Escribe un script que cree 4 directorios llamados `PobA`, `PobB`, `PobC`, `PobD` y dentro de cada uno de ellos un archivo de texto que diga *"Este es un individuo de la población x"* donde `x` debe corresponder al nombre del directorio.
+  * Escribe un script que baje 5 secuencias (algún loci corto, no un genoma) de una especie que te interese y señala cuántas veces existe la secuencia "TGCA" en cada una de ellas. ¿Sabes qué hace esta secuencia?
+
 ## **Ejercicio 1:**
 Escribe una línea de código que cree un archivo con los nombres de las muestras de maiz enlistadas en /Unidad1/Sesion1/Prac_Uni1/Maiz/nuevos_final.fam.
 * Se descargo el archivo `nuevos_final.fam` desde GitHub y luego se extrajo la segunda columna  con los nombres de las muestras.
