@@ -5,7 +5,7 @@
 ## **Ejercicio 1:**
 
 Crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 1]()![Fig1]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/log50.png)*
 ```
 r
 
@@ -13,22 +13,28 @@ var_log <- log10(50)
 var_suma <- var_log + 5
 var_suma
 ```
+![Fig1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/log50.png)
+
   * *Figura 1: Creación de variable de logaritmo base 10 en 50 sumado a 5 en consola de R.*
+
 ## **Ejercicio 2:**
 
 Suma el número 2 a todos los números entre 1 y 150.
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 2]()![Fig2]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/suma1a150.png)*
 ```
 r
 
 suma <- 1:150 + 2
 suma
 ```
+![Fig2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/suma1a150.png)
+
   * *Figura 2: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
 
 ## **Ejercicio 3:** 
+
 ¿Cuántos números son mayores a 20 en el vector -13432:234?
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 3]()![Fig3]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/conteo_mayor_a_20.png)*
 ```
 r
 
@@ -36,23 +42,27 @@ vect <- -13432:234
 conteo <- sum(vect>20)
 conteo
 ```
+![Fig3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/conteo_mayor_a_20.png)
+
   * *Figura 3: Creación de variables para la determinación de numeros mayores a 20 entre -13432:234 en consola de R.*
 
 ## **Ejercicio 4:** 
 
-Carga en R el archivo PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt y ponlo en un objeto de R llamado meta_maiz.
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 4]()![Fig4]()*
+Carga en R el archivo `PracUni1Ses3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y ponlo en un objeto de R llamado `meta_maiz`.
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/resultado_archivo_r.png)*
 ```
 r
 
 meta_maiz <- read.delim(C:/Users/DREAMFYRE 5/Documents/maizteocintle_SNP50k_meta_extended.txt)
 ```
+![Fig4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/resultado_archivo_r.png)
+
   * *Figura 4: Carga de archivo del practico y creación de objeto R llamado meta_maiz en consola de R.*
 
 ## **Ejercicio 5:**
 
 Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la consola.
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 5]()![Fig5]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop1.png)*
 ```
 r
 
@@ -60,10 +70,12 @@ for(i in 1:10){
   print(35 / i)
 }
 ```
+![Fig5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop1.png)
+
   * *Figura 5: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
 
 Modifica el loop anterior para que haga las divisiones solo para los números nones (con un comando, NO con c(1,3,...)). Pista: next.
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 6]()![Fig6]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 6](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop2.png)*
 ```
 r
 
@@ -72,10 +84,12 @@ for(i in 1:10){
   print(35 / i)
 }
 ```
+![Fig6](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/loop2.png)
+
   * *Figura 6: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
 
 Modifica el loop anterior para que los resultados de correr todo el loop se guarden en una df de dos columnas, la primera debe tener el texto "resultado para x" (donde x es cada uno de los elementos del loop) y la segunda el resultado correspondiente a cada elemento del loop. Pista: el primer paso es crear un vector fuera del loop. 
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 7]()![Fig7]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 7](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/dataframe.png)*
 ```
 r
 
@@ -89,6 +103,8 @@ for(i in 1:10){
 df_result <- data.frame(texto,resultado)
 df_result
 ```
+![Fig7](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea3/images/dataframe.png)
+
   * *Figura 7: Creación de variables para la suma de 2 con todos los numeros entre 1 y 150 en consola de R.*
 
 ## **Ejercicio 6:**
