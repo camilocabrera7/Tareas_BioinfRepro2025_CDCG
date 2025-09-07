@@ -11,10 +11,10 @@
 ## **Ejercicios:**
 ------------ 
 #### 1. Abre el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
-   * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20%20the%20environment.md).** Tal como se ve en la *[Figura 1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)* ![PTE formateado](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20formateado.png)
+   * El archivo preparado es el **[siguiente](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/preparing_the_environment.md).** Tal como se ve en la *[Figura 1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/preparing_the_environment_formateado.png)* ![PTE formateado](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/preparing_the_environment_formateado.png)
      * *Figura 1: Tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) en editor de texto Markdown, texto formateado.*
 
-   * Y se ve el código igualmente en la *[Figura 2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png) ![PTE codigo](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Preparing%20the%20environment%20codigo.png)*
+   * Y se ve el código igualmente en la *[Figura 2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/preparing_the_environment_codigo.png) ![PTE codigo](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/preparing_the_environment_codigo.png)*
      * *Figura 2: Tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) en editor de texto Markdown, texto en codigo.*
     
 #### 2. Clona el repositorio de la clase y actualízalo que vez que sea necesario. NOTAS IMPORTANTES PARA ESTE EJERCICIO:
@@ -23,13 +23,13 @@
    * Modifica la página de esta sesion en tu copia local, inclyebdo tus datos (nombre y fecha de modificacón).
    * Realiza un comit de tus cambios.
    * Toma un pantallazo de la página modificada (en un editor de Markdown) y del teminar luego de ejecuta $ git status incluye esos pantallazos con respectivas explicaciones de qué muestran en la página de las tadea para la Sesión en tu respositorio personal.
-   * La pagina modificada se puede observar en la *[Figura 3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png) ![EditMarkDown](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20editor%20Markdown%20formateado.png)*
+   * La pagina modificada se puede observar en la *[Figura 3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/pantallazo_editor_Markdown_formateado.png) ![EditMarkDown](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/pantallazo_editor_Markdown_formateado.png)*
      * *Figura 3: Modificación del archivo "Sesion2_Organización_proyecto_bioinf.md" del repositorio clonado de forma local, texto formateado.*
 
-   * En el caso de la versión de código se ve en la *[Figura 4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)* ![EditMarkDownCod](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/P%C3%A4ntallazo%20editor%20Markdown%20codigo.png)
+   * En el caso de la versión de código se ve en la *[Figura 4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/pantallazo_editor_Markdown_codigo.png)* ![EditMarkDownCod](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/pantallazo_editor_Markdown_codigo.png)
      * *Figura 4: Modificación del archivo "Sesion2_Organización_proyecto_bioinf.md" del repositorio clonado de forma local, texto en codigo.*
    
-   * Y el pantallazo del commit se ve en la *[Figura 5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)* ![Commit](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Pantallazo%20commit%20changes.png)
+   * Y el pantallazo del commit se ve en la *[Figura 5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/pantallazo_commit_changes.png)* ![Commit](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea2/images/pantallazo_commit_changes.png)
      * *Figura 5: Cambios realizados en la copia local del directorio de la pagina y un archivo agregado "ejercicio2.txt".*   
 
 #### 3. Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas_BioinfRepro2025_TusIniciales". Agregame a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usaiurio es "ravuch"
