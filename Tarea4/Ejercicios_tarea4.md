@@ -165,23 +165,29 @@ Se puede observar que hay:
 
 2) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente. Deposita cualquier archivo que generes an una carpeta `Unidad2/Prac_Uni5/results`:
 
-   a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión. El resultado de la consola puede verse en al *[Figura 16](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig16.png)*
+   a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión. El resultado de la consola puede verse en la *[Figura 16](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig16.png)*
 
 ```
-$ plink --bfile ../data/chilean_all48_hg19 --recode --out ../results/chilean_all48_hg19
+plink --bfile ../data/chilean_all48_hg19 --recode --out ../results/chilean_all48_hg19
 ```
 ![Fig16](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig16.png)
    * *Figura 16: Consola y código para la transformación de formato bed a formato ped del archivo `chilean_all48_hg19.bed` mediante plink.*
 
-b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse maicesArtegaetal2015_maf05_missing10
-
-¿Cuántos SNPs y cuántos individuos fueron removidos por los filtros?
+b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse maicesArtegaetal2015_maf05_missing10. El resultado de la consola puede verse en la *[Figura 17](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig17.png)*
 
 ```
-$ plink --bfile ../data/chilean_all48_hg19 --recode --maf 0.05  --mind 0.1 --out ../results/chilean_all48_hg19_maf05_missing10
+plink --bfile ../data/chilean_all48_hg19 --recode --maf 0.05  --mind 0.1 --out ../results/maicesArtegaetal2015_maf05_missing10
 ```
 
-c) Realiza un reporte de equilibrio de Hardy-Weinberg sobre el archivo `chilean_all48_hg19_maf05_missing10` creado en el ejercicio anterior. El nombre del archivo de tu output debe contener chilean_all48_hg19_maf05_missing10.
+![Fig17](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig17.png)
+   * *Figura 17: Consola y código para la transformación de formato bed a formato ped del archivo `chilean_all48_hg19.bed` mediante plink.*
+
+¿Cuántos SNPs y cuántos individuos fueron removidos por los filtros? **R: Se removieron 347070 SNPs y 2 individuos tal y cómo se observa en la *[Figura 18](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig18.png)***
+
+![Fig18](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig18.png)
+   * *Figura 18: Consola y código para la transformación de formato bed a formato ped del archivo `chilean_all48_hg19.bed` mediante plink.*
+
+c) Realiza un reporte de equilibrio de Hardy-Weinberg sobre el archivo `maicesArtegaetal2015_maf05_missing10` creado en el ejercicio anterior. El nombre del archivo de tu output debe contener chilean_all48_hg19_maf05_missing10.
 
 ```
 plink --file ../results/chilean_all48_hg19_maf05_missing10 --hardy --out ../results/chilean_all48_hg19_maf05_missing10
