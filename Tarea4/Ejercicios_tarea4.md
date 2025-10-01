@@ -185,48 +185,47 @@ plink --bfile ../data/chilean_all48_hg19 --recode --maf 0.05  --mind 0.1 --out .
 ¿Cuántos SNPs y cuántos individuos fueron removidos por los filtros? **R: Se removieron 347070 SNPs y 2 individuos tal y cómo se observa en la *[Figura 18](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig18.png)***
 
 ![Fig18](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig18.png)
-   * *Figura 18: Consola y código para la transformación de formato bed a formato ped del archivo `chilean_all48_hg19.bed` mediante plink.*
+   * *Figura 18: Consola con el detalle de remoción de SNPs e individuos en archivo `chilean_all48_hg19.bed` tras su conversión y filtrado mediante plink.*
 
 c) Realiza un reporte de equilibrio de Hardy-Weinberg sobre el archivo `maicesArtegaetal2015_maf05_missing10` creado en el ejercicio anterior. El nombre del archivo de tu output debe contener chilean_all48_hg19_maf05_missing10.
 
 ```
-plink --file ../results/chilean_all48_hg19_maf05_missing10 --hardy --out ../results/chilean_all48_hg19_maf05_missing10
+plink --file ../results/maicesArtegaetal2015_maf05_missing10 --hardy --out ../results/chilean_all48_hg19_maf05_missing10
 ```
+Observa el output y discute que es cada columna. El resultado del código y el output se pueden observar en la *[Figura 19](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig19.png)*
+![Fig19](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig19.png)
+   * *Figura 19: Consola con el código para generación de reporte de equilibrio Hardy-Weinberg y el output del código.*
 
-Observa el output y discute que es cada columna.
+Las columnas en .hwe son:
+  * CHR: cromosoma
+  * SNP: ID de variante
+  * TEST: grupo (“ALL”, “AFF”, “UNAFF”)
+  * A1, A2: alelos comparados
+  * GENO: conteo homocigoto A1 / heterocigoto / homocigoto A2
+  * O(HET): observados de heterocigotos
+  * E(HET): esperados de heterocigotos bajo HWE
+  * P: p‐valor de prueba exacta de HWE
 
-```
-head ../results/chilean_all48_hg19_maf05_missing10.hwe
-10.hwe
- CHR                          SNP     TEST   A1   A2                 GENO   O(HET)   E(HET)            P
-   1                    rs9701055      ALL    T    C              18/0/28        0   0.4764    5.994e-14
-   1                    rs9701055      AFF    T    C                0/0/0      nan      nan            1
-   1                    rs9701055    UNAFF    T    C              18/0/28        0   0.4764    5.994e-14
-   1                    rs9701055      ALL    T    C              0/16/28   0.3636   0.2975       0.3137
-   1                    rs9701055      AFF    T    C                0/0/0      nan      nan            1
-   1                    rs9701055    UNAFF    T    C              0/16/28   0.3636   0.2975       0.3137
-   1                    rs2073813      ALL    A    G              0/17/28   0.3778   0.3064       0.3197
-   1                    rs2073813      AFF    A    G                0/0/0      nan      nan            1
-   1                    rs2073813    UNAFF    A    G              0/17/28   0.3778   0.3064       0.3197
-```
 
-d) Observa el archivo `maicesArtegaetal2015.fam`. Consulta la documentación de plink para determinar que es cada columna. ¿Qué información hay y no hay en este archivo?
+d) Observa el archivo `chilean_all48_hg19.fam`. Consulta la documentación de plink para determinar que es cada columna. ¿Qué información hay y no hay en este archivo? El resultado del código y el output se pueden observar en la *[Figura 20](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig20.png)*
+![Fig20](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig20.png)
+   * *Figura 20: Consola con el código para observar el archivo `chilean_all48_hg19.fam`.*
 
-```
-$ head ../data/chilean_all48_hg19.fam
-CDSJ177 CDSJ177 0 0 1 1
-CDSJ021 CDSJ021 0 0 1 1
-ARI006 ARI006 0 0 1 1
-ARI021 ARI021 0 0 1 1
-ARI022 ARI022 0 0 2 1
-CDSJ174 CDSJ174 0 0 1 1
-CDSJ175 CDSJ175 0 0 1 1
-CDSJ046 CDSJ046 0 0 1 1
-CDSJ176 CDSJ176 0 0 1 1
-CDSJ469 CDSJ469 0 0 2 1
-```
+Las columnas del archivo `.fam` son las siguientes respectivamente:
+  * FID: Family ID
+  * IID: Individual ID
+  * PAT: father ID (0 si desconocido)
+  * MAT: mother ID (0 si desconocido)
+  * SEX: 1=masculino, 2=femenino, 0=desconocido
+  * PHEN: fenotipo (usualmente 1=control, 2=caso)
+El .fam **NO** contiene información de población, altitud ni ancestría; solo relaciones familiares, sexo y fenotipo.
 
-4) Utiliza la info el archivo `data/chilean_all48_hg19_popinfo.csv` y el comando `update-ids` de plink para cambiar los nombres de las muestras de `data/chilean_all48_hg19.fam` de tal forma que el family ID corresponda a la info de la columna `Categ.Altitud` en `maizteocintle_SNP50k_meta_extended.txt`. Pista: este ejercicio requiere varias operaciones, puedes dividirlas en diferentes scripts de bash o de R y bash. Tu respuesta debe incluir todos los scripts (y deben estar en /code). 
+4) Utiliza la info el archivo `data/chilean_all48_hg19_popinfo.csv` y el comando `update-ids` de plink para cambiar los nombres de las muestras de `data/chilean_all48_hg19.fam` de tal forma que el family ID corresponda a la info de la columna `Categ.Altitud` en `maizteocintle_SNP50k_meta_extended.txt`. Pista: este ejercicio requiere varias operaciones, puedes dividirlas en diferentes scripts de bash o de R y bash. Tu respuesta debe incluir todos los scripts (y deben estar en /code).El resultado del código y el output se pueden observar en la *[Figura 21](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig21.png)*
+![Fig21](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig21.png)
+   * *Figura 21: Consola con el código para cambiar los nombres de las muestras donde family ID corresponde `Categ.Altitud`.*
+
 5) Realiza un cuna comparación entre el sexo y archivo `fam`y el `popinfo` y calcula la proporción de discordancias
+
 6) Realiza un test de estimación de sexo usando plink y reporta los resultados en formato de tabla para todos los individuos con discordancia entre el sexto reportado en `fam` y el calculado con plink.
+
 7) Genera una tabla de contingencia de individuos por sexo y ancestría (hint: ver columna Ancestry en el archivo `popinfo`)
