@@ -153,8 +153,8 @@ $ ls -lh /datos/compartido/ChileGenomico/chilean_all48_hg19*
 Copia esos archivos a tu respositorio en una carpeta para la sesión `Unidad2/Prac_Uni5/data`  y contesta lo siguiente **asumiendo que tu WD es `Unidad2/Sesion1/code` (y no `data`).**
 
 1) Enlista los archivos plink que hay en `data`.  ¿Qué tipos de archivos son cada uno?
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 15]()*
-![Fig15]()
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 15](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig15.png)*
+![Fig15](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig15.png)
    * *Figura 15: Consola y código para determinación del tipo de archivo plink del repositorio.*
 
 Se puede observar que hay:
@@ -165,13 +165,13 @@ Se puede observar que hay:
 
 2) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente. Deposita cualquier archivo que generes an una carpeta `Unidad2/Prac_Uni5/results`:
 
-   a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión. El resultado de la consola puede verse en al *[Figura 16]()*
+   a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión. El resultado de la consola puede verse en al *[Figura 16](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig16.png)*
 
 ```
 $ plink --bfile ../data/chilean_all48_hg19 --recode --out ../results/chilean_all48_hg19
 ```
-![Fig16]()
-   * *Figura 15: Consola y código para determinación del tipo de archivo plink del repositorio.*
+![Fig16](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig16.png)
+   * *Figura 16: Consola y código para la transformación de formato bed a formato ped del archivo `chilean_all48_hg19.bed` mediante plink.*
 
 b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse maicesArtegaetal2015_maf05_missing10
 
