@@ -150,17 +150,28 @@ $ ls -lh /datos/compartido/ChileGenomico/chilean_all48_hg19*
 -rw-r--r-- 1 filesadmin datagroup 4.0K Sep 24 12:44 /datos/compartido/ChileGenomico/chilean_all48_hg19_popinfo.csv
 ```
 
-Copia esos archivos a tu respositorio en una carpeta para la sesión `Unididad2/Prac_Uni5/data`  y contesta lo siguiente **asumiendo que tu WD es `Unididad2/Sesion1/code` (y no `data`).**
+Copia esos archivos a tu respositorio en una carpeta para la sesión `Unidad2/Prac_Uni5/data`  y contesta lo siguiente **asumiendo que tu WD es `Unidad2/Sesion1/code` (y no `data`).**
 
 1) Enlista los archivos plink que hay en `data`.  ¿Qué tipos de archivos son cada uno?
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 15]()*
+![Fig15]()
+   * *Figura 15: Consola y código para determinación del tipo de archivo plink del repositorio.*
 
-2) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente. Deposita cualquier arquico que generes an una carpeta `Unididad2/Prac_Uni5/results`:
+Se puede observar que hay:
+     * `chilean_all48_hg19.bed` : archivo binario de genotipos (bit‐packed dos bits por genotipo).
+     * `chilean_all48_hg19.bim` : archivo de mapeo de variantes (chrom, SNP ID, posición genética, posición física, alelo1, alelo2).
+     * `chilean_all48_hg19.fam` : archivo de familias e individuos (FID, IID, paterno, materno, sexo, fenotipo).
+     * `chilean_all48_hg19_popinfo.csv` : metainformación de muestras (no es formato PLINK, CSV de población).
 
-a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión.
+2) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente. Deposita cualquier archivo que generes an una carpeta `Unidad2/Prac_Uni5/results`:
+
+   a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión. El resultado de la consola puede verse en al *[Figura 16]()*
 
 ```
 $ plink --bfile ../data/chilean_all48_hg19 --recode --out ../results/chilean_all48_hg19
 ```
+![Fig16]()
+   * *Figura 15: Consola y código para determinación del tipo de archivo plink del repositorio.*
 
 b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse maicesArtegaetal2015_maf05_missing10
 
