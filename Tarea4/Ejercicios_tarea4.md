@@ -5,69 +5,71 @@
 ## **Ejercicio 1:**
 Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y escribe un script que responda lo siguiente para el archivo `GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf ` **sin copiarlo a su directorio**:
 1. ¿Cuántos individuos y variantes (SNPs) tiene el archivo? **R: Hay 18 individuos y 4450360 posibles variantes.**
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 1]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig1.png)*
 ```
 vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf
 ```
-![Fig1]()
+![Fig1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig1.png)
 
    * *Figura 1: Consola y código para la obtención de individuos y SNPs en el archivo mediante vcftools.*
+
 2. ¿Cuántos sitios del archivo no tienen datos perdidos? **R: Hay 382626 sitios sin datos perdidos.**
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 2]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig2.png)*
 ```
 vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --max-missing 1
 ```
-![Fig2]()
+![Fig2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig2.png)
    * *Figura 2: Consola y código para el filtrado de sitios con datos pérdidos en el archivo mediante vcftools.*
+
 3. Genera un archivo en tu carpeta de trabajo `Prac_Uni5/data` que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 3]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig3.png)*
 ```
 vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --chr 1 --from-bp 3000000 --to-bp 5000000 --recode -c | bgzip -c > CLG_Chr15_3-5Mb.vcf.gz
 ```
-![Fig3]()
+![Fig3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig3.png)
    * *Figura 3: Consola y código para la obtención un archivo con SNPs en el cromosoma 15 mediante vcftools.*
 
 4. Reporta cuántas variantes tienen el archivo generado **R: Hay 4167 variantes en el archivo generado.**
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 4]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig4.png)*
 ```
 vcftools --gzvcf /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/CLG_Chr15_3-5Mb.vcf.gz
 ```
-![Fig4]()
+![Fig4](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig4.png)
    * *Figura 4: Consola y código para la obtención de individuos y SNPs en el archivo generado para el cromosoma 15 mediante vcftools.*
 
 5. Reporta la cobertura promedio para todos los individuos del set de datos **R: La cobertura promedio es 2.45635 para todos los individuos.**
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 5]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig5.png)*
 ```
 vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --depth --out  /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/depth_stats
 awk '{sum+=$3} END {print sum/NR}'  /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/depth_stats.idepth
 ```
-![Fig5]()
+![Fig5](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig5.png)
    * *Figura 5: Consola y código para la obtención de la cobertura promedio de todos los individuos del set de datos mediante vcftools.*
 
 6. Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
-  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 6]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 6](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig6.png)*
 ```
 vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --freq --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq
 ```
-![Fig6]()
+![Fig6](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig6.png)
    * *Figura 6: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos mediante vcftools.*
 
 7. Filtra el archivo de frecuencias para solo incluir variantes bialélicas (tip: awk puede ser útil para realizar esta tarea, tip2:  puedes usar bcftools para filtrar variantes con más de dos alelos antes de calcular las frecuencias)
-  * Para ello se puede realizar de dos formas y el resultado se puede ver en las *[Figura 7]()* y *[Figura 8]()*
+  * Para ello se puede realizar de dos formas y el resultado se puede ver en las *[Figura 7](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig7.png)* y *[Figura 8](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig8.png)*
 ```
 awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
 ```
-![Fig7]()
-   * *Figura 7: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
+![Fig7](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig7.png)
+   * *Figura 7: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos mediante awk.*
 ```
 bcftools view -m2 -M2 -v snps /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf -Ov -o /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/biallelic_snps.vcf
 vcftools --vcf /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/biallelic_snps.vcf --freq --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic
 ```
-![Fig8]()
-   * *Figura 8: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos mediante awk.*
+![Fig8](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig8.png)
+   * *Figura 8: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
 
 8. Llama a un script escrito en lenguaje R que lee el archivo de frecuencias de variantes bialélicas y guarda un histograma con el espectro de MAF para las variantes bialélicas
-  * Para ello primero se debe crear el archivo de Rscript mediante vim `vim plot_maf_spectrum.R`, luego se debe realizar el script de R, para luego ejecutarlo en bash con `Rscript plot_maf_spectrum.R /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/histo_maf_biallelic.png` y se puede ver la creación del png en la *[Figura 9]()*
+  * Para ello primero se debe crear el archivo de Rscript mediante vim `vim plot_maf_spectrum.R`, luego se debe realizar el script de R, para luego ejecutarlo en bash con `Rscript plot_maf_spectrum.R /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/histo_maf_biallelic.png` y se puede ver la creación del png en la *[Figura 9](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig9.png)*
 ```
 r
 
@@ -89,48 +91,53 @@ png(outfile)
 hist(maf, breaks=50, main="MAF Spectrum", xlab="Minor Allele Frequency", ylab="Frequency")
 dev.off()
 ```
-![Fig9]()
+![Fig9](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig9.png)
    * *Figura 9: Consola y código para el cálculo de frecuencias bialelicas mediante Rscript y creación de histograma con espectro MAF en png.*
 
-9. ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
-  * Para ello se puede realizar de dos formas y el resultado se puede ver en la *[Figura 10]()*
+9. ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05? **R: hay 668227 sitios con frecuencia del alelo meno <0.05**
+  * Para ello se utiliza awk y el resultado se puede ver en la *[Figura 10](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig10.png)*
 ```
-awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
+awk 'NR > 1 {
+    freq1 = gensub(/.*:/, "", "g", $5)
+    freq2 = gensub(/.*:/, "", "g", $6)
+    maf = (freq1 < freq2) ? freq1 : freq2
+    if (maf < 0.05) count++
+} END {print count+0}' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
 ```
-![Fig10]()
-   * *Figura 10: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
+![Fig10](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig10.png)
+   * *Figura 10: Consola y código para el cálculo de frecuencia de alelo menor mediante awk.*
 
 10. Calcula la heterocigosidad de cada individuo.
-  * Para ello se puede realizar de dos formas y el resultado se puede ver en la *[Figura 11]()*
+  * Para ello se utiliza awk y el resultado se puede ver en la *[Figura 11](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig11.png)*
 ```
-awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
+vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --het --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/indv_het
 ```
-![Fig11]()
-   * *Figura 11: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
+![Fig11](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig11.png)
+   * *Figura 11: Consola y código para el cálculo de heterocigosidad de cada individuo del dataset mediante vcftools.*
 
 11. Calcula la diversidad nucleotídica por sitio.
-  * Para ello se puede realizar de dos formas y el resultado se puede ver en la *[Figura 12]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 12](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig12.png)*
 ```
-awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
+vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --site-pi --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/site_pi
 ```
-![Fig12]()
-   * *Figura 12: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
+![Fig12](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig12.png)
+   * *Figura 12: Consola y código para el cálculo de diversidad nucleotídica por sitio mediante vcftools.*
 
 12. Filtra los sitios que tengan una frecuencia del alelo menor <0.05
-  * Para ello se puede realizar de dos formas y el resultado se puede ver en la *[Figura 13]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 13](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig13.png)*
 ```
-awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
+vcftools --vcf /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/biallelic_snps.vcf --maf 0.05 --recode --recode-INFO-all --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/wolves_maf05
 ```
-![Fig13]()
-   * *Figura 13: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
+![Fig13](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig13.png)
+   * *Figura 13: Consola y código para filtración de sitios con una frecuencia de alelo menor a <0.05 mediante vcftools.*
 
 13. Convierte el archivo `wolves_maf05.vcf` a formato plink.
-  * Para ello se puede realizar de dos formas y el resultado se puede ver en la *[Figura 14]()*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 14](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig14.png)*
 ```
 awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
 ```
-![Fig14]()
-   * *Figura 14: Consola y código para el cálculo de frecuencia de cada alelo para todos los individuos del set de datos con filtrado por bcftools.*
+![Fig14](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig14.png)
+   * *Figura 14: Consola y código para la conversión del archivo `wolves_maf05.vcf` a formato plink mediante vcftools.*
 
 ## **Ejercicio 2:**
 En la ruta `/datos/compartido/ChileGenomico/` encontrarás varios archivos plink y un archivo de matainformación (`popinfo`). 
