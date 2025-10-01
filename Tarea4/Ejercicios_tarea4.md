@@ -108,7 +108,7 @@ awk 'NR > 1 {
    * *Figura 10: Consola y código para el cálculo de frecuencia de alelo menor mediante awk.*
 
 10. Calcula la heterocigosidad de cada individuo.
-  * Para ello se utiliza awk y el resultado se puede ver en la *[Figura 11](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig11.png)*
+  * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 11](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig11.png)*
 ```
 vcftools --vcf /datos/compartido/ChileGenomico/GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf --het --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/indv_het
 ```
@@ -134,7 +134,7 @@ vcftools --vcf /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/bia
 13. Convierte el archivo `wolves_maf05.vcf` a formato plink.
   * Para ello se realizó el siguiente código y el resultado se puede ver en la *[Figura 14](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig14.png)*
 ```
-awk 'NR==1 || ($5!~"," && $5!="")' /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq.frq > /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/allele_freq_biallelic.frq
+vcftools --vcf /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/wolves_maf05.recode.vcf --plink --out /home/bioinfo1/ccabrera/BioinfinvRepro/Unidad2/Prac_Uni5/data/wolves_maf05
 ```
 ![Fig14](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea4/images/fig14.png)
    * *Figura 14: Consola y código para la conversión del archivo `wolves_maf05.vcf` a formato plink mediante vcftools.*
