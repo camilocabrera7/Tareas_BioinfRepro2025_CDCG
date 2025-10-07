@@ -3,7 +3,6 @@
 **07.10.2025**
 -------------------
 ## **Ejercicio 1:**
-Responda las siguientes preguntas:
 
 1. ¿Cómo se llaman los archivos que contienen las tasas de datos perdidos por SNP y por muestra?
 2. ¿Cuántas variantes se eliminaron por tener una tasa de datos perdidos mayor a 0.2?
