@@ -64,6 +64,6 @@ awk 'NR>1 {
 ## **Ejercicio 7:**
 
 1. ¿Cuántos SNPs quedaron luego del filtro?
-   * R: 
+   * R: Quedaron **103,214 SNPs seleccionados**, como lo indica el conteo de líneas del archivo `indepSNP.prune.in`
 3. ADMIXTURE asume que los individuos no están emparentados. Sin embargo, no realizamos ningún filtro. ¿Por qué?
-   * R:
+   * R: No se realizó un filtro de individuos emparentados para la fase de ADMIXTURE porque en el control de calidad previo del set ChileGenómico-HapMap, ya fueron eliminados aquellos con pihat ≥ 0.2 (parientes cercanos). Los individuos restantes tienen baja o nula relación, lo que garantiza que los resultados de inferecia de ancestría (por máxima verosimilitud) no estarán sesgados por parentesco oculto
