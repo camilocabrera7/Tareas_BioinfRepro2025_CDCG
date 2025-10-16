@@ -502,7 +502,7 @@ Los resultados fueron los siguientes:
 
    Aqui observamos que todos los valores de Z son mayores a 3, por lo tanto todos los resultados obtenidos son significativos. En este caso los que mas comparten una historia comun son `Spain_Medieval.AG` y `Spain_MLN.AG`. Ademas, se observa que el análisis resulta ser consistente ya que las poblaciones que tienen una mayor historia comun son las que estan geográficamente relacionadas y lo mas probable es que vengan del mismo origen evolutivo o que compartan algun antepasado común mas reciente en el tiempo.
 
-   Por otro lado los que tienen menos historia evolutiva común son Spain_Islamic_Zira.AG y Yoruba.DG, es decir tienen menos deriva génica entre sí.
+   Por otro lado los que tienen menos historia evolutiva común son `Spain_Islamic_Zira.AG` y `Yoruba.DG`, es decir tienen menos deriva génica entre sí.
 
 3) Resultado f4
 
