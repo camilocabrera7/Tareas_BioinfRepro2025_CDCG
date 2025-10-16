@@ -1,7 +1,7 @@
-# Tarea 2.3
-
-Estudiantes: Camilo Cabrera y Alejandro Ahumada
-
+# Tarea 6 Unidad 2 -Sesión 6
+**Camilo Cabrera y Alejandro Ahumada** 
+**15.10.2025**
+--------
 ## Project 1
 
 Para esto se utilizo el siguiente codigo
