@@ -76,26 +76,36 @@ view(admix_3way1$weights)
 Los resultados obtenidos se detallan a continuacion:
 
 1) Resultado f3
+
    ![](./images/Project1_f3.png)
-   En estos resultados se observa que todos los valores de Z son sobre 3, por lo tanto todos los resultados son significativos. Los que mas comparten una historia genetica comun son Basque.DG y Luxembourg_Mesolithic.DG. En la Imagen se obserban ordenados desde los que tienen una mayor historia comun hasta los que estan mas alejados geneticamente. Dicho de otra forma, los primeros comparten una mayor deriva genetica
+   
+   En estos resultados se observa que todos los valores de Z son sobre 3, por lo tanto todos los resultados son significativos. Los que mas comparten una historia genética común son `Basque.DG` y `Luxembourg_Mesolithic.DG`. En la imagen se observan ordenados desde los que tienen una mayor historia comun hasta los que estan mas alejados genéticamente. Dicho de otra forma, los primeros comparten una mayor deriva genética.
 
-2) Resultado f4
+3) Resultado f4
+
    ![](./images/Project1_f4.png)
-   Aqui se observa que los valores Z solo son menores a 3 en los ultimos 2 casos, por lo tanto estos valores no serian significativos (numeros 6 y 4). Por otro lado, par alos resultados en 3, 1, 2 y 5 se observan valores positivos, por lo tanto hubo un flujo genetico entre GBR.DG y los individuos Luxembourg_Mesolithic.DG, Turkey_Marmara_Barcin_N.AG, Russia_Samara_EBA_Yamnaya.AG, Russia_Samara_EBA_Yamnaya.AG
+   
+   Aqui se observa que los valores Z solo son menores a 3 en los ultimos 2 casos, por lo tanto estos valores no serian significativos (numeros 6 y 4). Por otro lado, par alos resultados en 3, 1, 2 y 5 se observan valores positivos, por lo tanto hubo un flujo genético entre GBR.DG y los individuos `Luxembourg_Mesolithic.DG`, `Turkey_Marmara_Barcin_N.AG` y `Russia_Samara_EBA_Yamnaya.AG`.
 
-3) Resultado wave
+5) Resultado wave
+
    ![](./images/Project1_wave1.png)
-   Solo en el rank 3 se supera un valor p superior a 0.05, por lo tanto se necesita de al menos 4 fuentes ancestrales para explicar las poblaciones ubicadas en target1 y source1
+   
+   Solo en el rank 3 se supera un valor p superior a 0.05, por lo tanto se necesita de al menos 4 fuentes ancestrales para explicar las poblaciones ubicadas en `target1` y `source1`.
 
-4) Resultado qpAdm
-    De todas formas se ejecutaron los codigos para 2 y 3 fuentes, los resultados fueron los siguientes
-    2 fuentes
-    ![](./images/Project1_qpAdm2.png)
+7) Resultado qpAdm
+
+   De todas formas se ejecutaron los codigos para 2 y 3 fuentes, los resultados fueron los siguientes:
    
-    3 fuentes
-    ![](./images/Project1_qpAdm3.png)
+    *  2 fuentes
+
+   ![](./images/Project1_qpAdm2.png)
    
-    En este caso en ambos modelos los resultados de Z son menores a 3, por lo tanto ninguno de los resultados es significativo y por tanto no se pueden sacar conclusiones, la causa de esto podria ser porque segun el analisis previo con qpWave se llego a la conclusion que al menos se necesitarian de 4 fuentes ancestrales
+    *  3 fuentes
+
+   ![](./images/Project1_qpAdm3.png)
+   
+    En este caso en ambos modelos los resultados de Z son menores a 3, por lo tanto ninguno de los resultados es significativo y por tanto no se pueden sacar conclusiones, la causa de esto podria ser porque según el análisis previo con qpWave se llegó a la conclusión que al menos se necesitarian de 4 fuentes ancestrales.
 
 ## Project 2
 
@@ -171,52 +181,61 @@ View(admix_2way_p2_2$weights)
 View(admix_2way_p2_3$weights)
 ```
 
-Los resultados obtenidos se detallan a continuacion:
+Los resultados obtenidos se detallan a continuación:
 
 1) Resultado f3
+
    ![](./images/f3_results_p2.png)
+
    Las tres poblaciones objetivo tienen ancestría significativa (z > 3) de ambas fuentes, con valores positivos para todas las combinaciones, lo que indica que estas poblaciones de la Edad de Bronce efectivamente comparten deriva genética con ambos grupos ancestrales (cazadores-recolectores del este de Europa y pastores neolíticos iraníes).
 
-2) Resultados f4 para cada población target
+3) Resultados f4 para cada población target
+
    ![](./images/f4_results_p2_1.png)
    ![](./images/f4_results_p2_2.png)
    ![](./images/f4_results_p2_3.png)
-   Valores negativos con Iran_GanjDareh_N: La mayor parte de los f4 entre las poblaciones objetivo y Iran_GanjDareh_N son significativamente negativos (valores Z < -3). Esto indica que las poblaciones objetivo comparten más deriva genética con Iran_GanjDareh_N de lo esperado bajo un modelo sin mezcla.
-   Valores positivos con Russia_Sidelkino_HG: Los f4 con Russia_Sidelkino_HG son mayormente positivos (valores Z > 3), indicando afinidad genética adicional.
+
+   * Valores negativos con `Iran_GanjDareh_N.AG`: La mayor parte de los f4 entre las poblaciones objetivo y `Iran_GanjDareh_N.AG` son significativamente negativos (valores Z < -3). Esto indica que las poblaciones objetivo comparten más deriva genética con `Iran_GanjDareh_N.AG` de lo esperado bajo un modelo sin mezcla.
+   * Valores positivos con `Russia_Sidelkino_HG.SG`: Los f4 con `Russia_Sidelkino_HG.SG` son mayormente positivos (valores Z > 3), indicando afinidad genética adicional.
    El patrón de estadísticas f4 significativamente no-cero en múltiples configuraciones es evidencia inequívoca de que estas poblaciones están mezcladas, no relacionadas por un árbol filogenético simple.
 
-3) Resultado wave
+5) Resultado wave
+
    ![](./images/wave_p2_1.png)
    ![](./images/wave_p2_2.png)
    ![](./images/wave_p2_3.png)
+
    En todas las combinaciones de poblaciones se puede observar que el f4rank que posee un valor de p > 0.05 es 1. Por lo tanto, las tres poblaciones objetivo (Sintashta, Alakul, Srubnaya) requieren al menos 2 flujos ancestrales independientes para ser explicadas adecuadamente. Un modelo con una sola fuente ancestral es estadísticamente inadecuado.
 
-4) Resultado qpAdm
+7) Resultado qpAdm
    En esta situación de proyecto se procedieron con modelos de dos vías para cada población target.
-   Para Russia_MLBA_Sintashta.AG:
-     ![](./images/admix_2way_p2_1.png)
+
+   Para `Russia_MLBA_Sintashta.AG`:
+
+   ![](./images/admix_2way_p2_1.png)
    
    * Iran_GanjDareh_N.AG: 30.7% (SE: 2.7%, Z: 4.56)
    * Russia_Sidelkino_HG.SG: 69.3% (SE: 2.7%, Z: 10.32)
+   
+   Para `Kazakhstan_Maitan_MLBA_Alakul.AG`:
+     
+   ![](./images/admix_2way_p2_2.png)
 
-   Para Kazakhstan_Maitan_MLBA_Alakul.AG:
-     ![](./images/admix_2way_p2_2.png)
+   * Iran_GanjDareh_N.AG: 35.8% (SE: 7.1%, Z: 5.08)
+   * Russia_Sidelkino_HG.SG: 64.2% (SE: 7.1%, Z: 9.06)
 
-    *  Iran_GanjDareh_N.AG: 35.8% (SE: 7.1%, Z: 5.08)
-    *  Russia_Sidelkino_HG.SG: 64.2% (SE: 7.1%, Z: 9.06)
+   Para `Russia_LBA_Srubnaya_Alakul.SG`:
 
-   Para Russia_LBA_Srubnaya_Alakul.SG:
-    ![](./images/admix_2way_p2_3.png)
+   ![](./images/admix_2way_p2_3.png)
     * Iran_GanjDareh_N.AG: 19.7% (SE: 7.9%, Z: 2.50)
     * Russia_Sidelkino_HG.SG: 80.2% (SE: 7.9%, Z: 10.17)
 
-Todas las tres poblaciones de la Edad de Bronce pueden modelarse como mezclas de dos componentes ancestrales principales:
+   Todas las tres poblaciones de la Edad de Bronce pueden modelarse como mezclas de dos componentes ancestrales principales:
 
-* Una ancestría mayoritaria (~64-80%) relacionada con cazadores-recolectores del este de Europa (EHG/Sidelkino)
+    * Una ancestría mayoritaria (~64-80%) relacionada con cazadores-recolectores del este de Europa (EHG/Sidelkino)
+    * Una ancestría minoritaria (~20-36%) relacionada con pastores neolíticos de los Montes Zagros de Irán (Ganj Dareh)​
 
-* Una ancestría minoritaria (~20-36%) relacionada con pastores neolíticos de los Montes Zagros de Irán (Ganj Dareh)​
-
-La cultura Srubnaya muestra la menor contribución iraní (~20%), mientras que Alakul muestra la mayor (~36%), con Sintashta en una posición intermedia (~31%).
+   La cultura Srubnaya muestra la menor contribución iraní (~20%), mientras que Alakul muestra la mayor (~36%), con Sintashta en una posición intermedia (~31%).
 
 ## Project 3
 
@@ -316,22 +335,28 @@ View(admix_2way_p3_3$weights)
 View(admix_2way_p3_4$weights)
 ```
 
-Los resultados obtenidos se detallan a continuacion:
+Los resultados obtenidos se detallan a continuación:
 
 1. Resultado f3
+
    ![](./images/f3_results_p3.png)
+
    Los valores son notablemente altos y estadísticamente significativos (z-scores extremadamente elevados), lo que revela que existe una fuerte deriva genética compartida entre cada población americana y cada fuente del norte analizada. Esto sugiere un origen común o un alto grado de mezcla entre las poblaciones estudiadas y estas ramas fundadoras norteamericanas, confirmando la afinidad genética panamericana entre los grupos nativos antiguos y actuales.
 
-2. Resultados f4 para cada población target
+3. Resultados f4 para cada población target
+
    ![](./images/f4_results_p3_1.png)
    ![](./images/f4_results_p3_2.png)
    ![](./images/f4_results_p3_3.png)
    ![](./images/f4_results_p3_4.png)
-   En este caso poseemos ambas situaciones tanto valores negativos o positivos, que poseen distintas interpretaciones. Por lo que:
-   Valores negativos de f4 con significancia estadística (z < -3) indican que la población objetivo comparte más afinidad genética con la fuente comparada que lo esperado bajo un modelo de árbol simple sin mezcla. Esto sugiere eventos de mezcla históricamente relevantes y una relación genética más fuerte de la población americana con esa fuente ancestral específica.
-   Valores positivos o cercanos a cero: Reflejan ya sea una relación simétrica o indefinida entre la target y la fuente usada en la comparación. En general, no evidencian una mezcla genética extra por encima de lo esperado.
 
-3. Resultado wave
+   En este caso poseemos ambas situaciones tanto valores negativos o positivos, que poseen distintas interpretaciones. Por lo que:
+
+   * Valores negativos de f4 con significancia estadística (z < -3) indican que la población objetivo comparte más afinidad genética con la fuente comparada que lo esperado bajo un modelo de árbol simple sin mezcla. Esto sugiere eventos de mezcla históricamente relevantes y una relación genética más fuerte de la población americana con esa fuente ancestral específica.
+   * Valores positivos o cercanos a cero: Reflejan ya sea una relación simétrica o indefinida entre la target y la fuente usada en la comparación. En general, no evidencian una mezcla genética extra por encima de lo esperado.
+
+5. Resultado wave
+  
    ![](./images/wave_p3_1.png)
    ![](./images/wave_p3_2.png)
    ![](./images/wave_p3_3.png)
@@ -340,22 +365,33 @@ Los resultados obtenidos se detallan a continuacion:
    ![](./images/wave_p3_6.png)
    ![](./images/wave_p3_7.png)
    ![](./images/wave_p3_8.png)
+
    En la mayoría de los casos, los modelos con dos o tres fuentes ancestrales (f4rank 2 o 3) tienen p-valores altos (0.36–0.74), lo que significa la historia genética de los americanos requiere al menos dos o tres linajes ancestrales principales.
    Por lo que esta situación sería un modelo de mezcla complejo, donde las poblaciones americanas modernas y caribeñas (como CLM, Bahamas, Pima) y antiguas (Chile_Conchali_700BP) son resultado de al menos dos o tres migraciones independientes o linajes genéticos diferenciados.
 
-4. Resultado qpAdm
+7. Resultado qpAdm
+
    Para Pima.DG
-     ![](./images/admix_2way_p2_1.png)
+
+   ![](./images/admix_2way_p3_1.png)
+
    Para CLM.DG
-     ![](./images/admix_2way_p2_1.png)
+
+   ![](./images/admix_2way_p3_2.png)
+
    Para Bahamas_EleutheraIsl_Ceramic.AG
-     ![](./images/admix_2way_p2_1.png)
+
+   ![](./images/admix_2way_p3_3.png)
+
    Para Chile_Conchali_700BP.AG
-     ![](./images/admix_2way_p2_1.png)
+
+   ![](./images/admix_2way_p3_4.png)
 
    En esta situación de proyecto se procedieron con modelos de dos vías para cada población target.
-   Para todos los targets (Pima.DG, CLM.DG, Bahamas_EleutheraIsl_Ceramic.AG, Chile_Conchali_700BP.AG), los valores de "weight" (proporciones de mezcla) son negativos o extremadamente altos, mientras que los errores estándar (se) son enormes y los valores de Z son bajos. Esto es evidencia de un modelo no identificable o no realista ya sea que las fuentes seleccionadas son demasiado similares entre sí (es lo más probable dado el caso), o sus perfiles genéticos no representan adecuadamente los linajes ancestrales reales de los targets.
-   Biológicamente, estos resultados indican que las poblaciones indígenas americanas no pueden explicarse con precisión como una mezcla simple de sólo esas dos fuentes norteamericanas; su acervo genético es más complejo y probablemente requiere otros linajes o fuentes, tal como sugiere el qpWave (necesidad de ≥3 streams de ancestralidad)
+
+   Para todos los targets `(Pima.DG, CLM.DG, Bahamas_EleutheraIsl_Ceramic.AG, Chile_Conchali_700BP.AG)`, los valores de "weight" (proporciones de mezcla) son negativos o extremadamente altos, mientras que los errores estándar (se) son enormes y los valores de Z son bajos. Esto es evidencia de un modelo no identificable o no realista ya sea que las fuentes seleccionadas son demasiado similares entre sí (es lo más probable dado el caso), o sus perfiles genéticos no representan adecuadamente los linajes ancestrales reales de los targets.
+
+   Biológicamente, estos resultados indican que las poblaciones indígenas americanas no pueden explicarse con precisión como una mezcla simple de sólo esas dos fuentes norteamericanas, su acervo genético es más complejo y probablemente requiere otros linajes o fuentes, tal como sugiere el qpWave (necesidad de ≥3 streams de ancestralidad).
 
 ## Project 4
 
@@ -461,64 +497,95 @@ view(admix_3way5$weights)
 Los resultados fueron los siguientes:
 
 1) Resultados f3
-   ![](./images/Project4_f3.png)
-    Aqui observamos que todos los valores de Z son mayores a 3, por lo tanto todos los resultados obtenidos son significativos. En este caso los que mas comparten una historia comun son Spain_Medieval.AG y Spain_MLN.AG. Ademas se observa que el analisis resulta ser consistente ya que las poblaciones que tienen una mayor historia comun son las que estan geograficamente relacionadas y lo mas probable es que vengan del mismo origen evolutivo o que compartan algun antepasado comun mas reciente en el tiempo
-    Por otro lado los que tienen menos historia evolutiva comun son Spain_Islamic_Zira.AG y Yoruba.DG, es decir tienen menos deriva genica entre si
 
-2) Resultado f4
-    ![](./images/Project4_f4.png)
-    Solo se observaron valores de Z mayores a 3 en la posicion 4 y 7 de la tabla de resultados (ordenados de mayor a menor segun el valor de est ambos datos se ubican al inicio de la tabla). Por lo tanto los datos solo son significativos en esos dos analisis, debido a que el valor de est es positivo se puede concluir que existe una flujo genetico entre Spain_Islamic.AG y Spain_MLN.AG
+   ![](./images/Project4_f3..png)
+
+   Aqui observamos que todos los valores de Z son mayores a 3, por lo tanto todos los resultados obtenidos son significativos. En este caso los que mas comparten una historia comun son `Spain_Medieval.AG` y `Spain_MLN.AG`. Ademas, se observa que el análisis resulta ser consistente ya que las poblaciones que tienen una mayor historia comun son las que estan geográficamente relacionadas y lo mas probable es que vengan del mismo origen evolutivo o que compartan algun antepasado común mas reciente en el tiempo.
+
+   Por otro lado los que tienen menos historia evolutiva común son Spain_Islamic_Zira.AG y Yoruba.DG, es decir tienen menos deriva génica entre sí.
+
+3) Resultado f4
+
+   ![](./images/Project4_f4.png)
+
+   Solo se observaron valores de Z mayores a 3 en la posicion 4 y 7 de la tabla de resultados (ordenados de mayor a menor segun el valor de est ambos datos se ubican al inicio de la tabla). Por lo tanto, los datos sólo son significativos en esos dos análisis, debido a que el valor de este es positivo se puede concluir que existe una flujo genetico entre `Spain_Islamic.AG` y `Spain_MLN.AG`.
    
-   3) Resultado qpWave
-      Se reallizo el analisis de qpWave para cada uno de los targets
-      Los resultados fueron los siguientes:
-      Wave2
-      ![](./images/Project4_wave2.png)
-      Wave3
-      ![](./images/Project4_wave3.png)
-      Wave4
-      ![](./images/Project4_wave4.png)
-      Wave5
-      ![](./images/Project4_wave5.png)
-      Wave6
-      ![](./images/Project4_wave6.png)
-      En todos los casos se observa que ningun valor p supera el 0.05, por lo tanto con 3 fuentes de ascendencia que se analizaron en cada uno de los casos no es suficiente para explicar la poblacion target estudiada, por lo tanto es probable que se necesiten de mas fuentes de ascendencia 
+4) Resultado qpWave
 
-3) Resultados qpAdm
-    Segun el analisis anterior es mas logico utilizar el qpAdm de 3 vias o mas, de todas formas se ejecutaron los programas con 2 y 3 vias
+   Se realizó el análisis de qpWave para cada uno de los targets.
+
+   Los resultados fueron los siguientes:
+
+   Wave2
+
+      ![](./images/Project4_wave2.png)
+
+   Wave3
+
+      ![](./images/Project4_wave3.png)
+
+   Wave4
+
+      ![](./images/Project4_wave4.png)
+
+   Wave5
+
+      ![](./images/Project4_wave5.png)
+
+   Wave6
+
+      ![](./images/Project4_wave6.png)
+
+   En todos los casos se observa que ningun valor p supera el 0.05, por lo tanto con 3 fuentes de ascendencia que se analizaron en cada uno de los casos no es suficiente para explicar la poblacion target estudiada, por lo tanto es probable que se necesiten de mas fuentes de ascendencia. 
+
+5) Resultados qpAdm
+
+   Segun el análisis anterior es mas lógico utilizar el qpAdm de 3 vías o mas, de todas formas se ejecutaron los programas con 2 y 3 vías.
    
     2 Fuentes:
-    view(admix_2way1$weights)
-    ![](./images/1.png)
+
+   view(admix_2way1$weights)
+
+   ![](./images/1.png)
    
-    view(admix_2way2$weights)
-    ![](./images/2.png)
+   view(admix_2way2$weights)
+
+   ![](./images/2.png)
    
-    view(admix_2way3$weights
-    ![](./images/3.png)
+   view(admix_2way3$weights
+
+   ![](./images/3.png)
    
    view(admix_2way4$weights)
+
    ![](./images/4.png)
    
    view(admix_2way5$weights)
-    ![](./images/5.png)
+
+   ![](./images/5.png)
    
-   Solo en Spain_Islamic.AG y Spain_MLN.AG, y Spain_Islamic.AG y Spain_MLN.AG se observo un valor de Z superior a 3. En ambos casos se estan comparando a la misma poblacion pero el valor weight es diferente, se supera el 0.7 de aporte de la anscestria de Spain_MLN.AG, sobre Spain_Islamic.AG
+   Solo en `Spain_Islamic.AG` y `Spain_MLN.AG`, y `Spain_Islamic.AG` y `Spain_MLN.AG` se observo un valor de Z superior a 3. En ambos casos se estan comparando a la misma población pero el valor weight es diferente, se supera el 0.7 de aporte de la anscestría de `Spain_MLN.AG`, sobre `Spain_Islamic.AG`.
    
    3 Fuentes
-    view(admix_3way1$weights)
-    ![](./images/6.png)
+
+   view(admix_3way1$weights)
+
+   ![](./images/6.png)
    
-    view(admix_3way2$weights)
-    ![](./images/7.png)
+   view(admix_3way2$weights)
+
+   ![](./images/7.png)
    
-    view(admix_3way3$weights)
-    ![](./images/8.png)
+   view(admix_3way3$weights)
+
+   ![](./images/8.png)
    
-    view(admix_3way4$weights)
-    ![](./images/9.png)
+   view(admix_3way4$weights)
+
+   ![](./images/9.png)
    
-    view(admix_3way5$weights)
-    ![](./images/10.png)
+   view(admix_3way5$weights)
+
+   ![](./images/10.png)
    
-   Aqui, solo en 2 se observo un valor Z superior a  3, pero los resultados de wight de estos dos es superior a 1, por lo tanto los resultados no son validos y no podemos savar buenas conclusiones
+   Aqui, sólo en 2 se observó un valor Z superior a  3, pero los resultados de weight de estos dos es superior a 1, por lo tanto los resultados no son válidos y no podemos sacar buenas conclusiones.
