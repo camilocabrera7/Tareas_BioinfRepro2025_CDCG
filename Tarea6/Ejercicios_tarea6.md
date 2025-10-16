@@ -4,7 +4,7 @@
 --------
 ## Project 1
 
-Para esto se utilizo el siguiente codigo
+Para esto se utilizo el siguiente [código](./codes/project1.R):
 
 ```
 # Once installed, load packages:
@@ -109,7 +109,7 @@ Los resultados obtenidos se detallan a continuacion:
 
 ## Project 2
 
-Para resolver el siguiente proyecto se realizó el siguiente código:
+Para resolver el siguiente proyecto se realizó el siguiente [código](./codes/project2.R):
 
 ```
 # Project 2: Steppe formation model
@@ -239,7 +239,7 @@ Los resultados obtenidos se detallan a continuación:
 
 ## Project 3
 
-En este proyecto se utilizó el siguiente código:
+En este proyecto se utilizó el siguiente [código](./codes/project3.R):
 
 ```
 # Project 3: Peopling of the Americas
@@ -395,7 +395,7 @@ Los resultados obtenidos se detallan a continuación:
 
 ## Project 4
 
-En este caso se uso el siguiente codigo:
+En este caso se uso el siguiente [código](./codes/project4.R):
 
 ```
 # Project 4: Medieval / Iberian admixture
