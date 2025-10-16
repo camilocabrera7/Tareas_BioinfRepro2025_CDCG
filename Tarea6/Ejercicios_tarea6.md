@@ -199,17 +199,14 @@ Los resultados obtenidos se detallan a continuacion:
    * Iran_GanjDareh_N.AG: 30.7% (SE: 2.7%, Z: 4.56)
    * Russia_Sidelkino_HG.SG: 69.3% (SE: 2.7%, Z: 10.32)
 
-        Para Kazakhstan_Maitan_MLBA_Alakul.AG:
-
-       ![](./images/admix_2way_p2_2.png)
+   Para Kazakhstan_Maitan_MLBA_Alakul.AG:
+     ![](./images/admix_2way_p2_2.png)
 
     *  Iran_GanjDareh_N.AG: 35.8% (SE: 7.1%, Z: 5.08)
     *  Russia_Sidelkino_HG.SG: 64.2% (SE: 7.1%, Z: 9.06)
 
-       Para Russia_LBA_Srubnaya_Alakul.SG:
-    
-       ![](./images/admix_2way_p2_3.png)
-    
+   Para Russia_LBA_Srubnaya_Alakul.SG:
+    ![](./images/admix_2way_p2_3.png)
     * Iran_GanjDareh_N.AG: 19.7% (SE: 7.9%, Z: 2.50)
     * Russia_Sidelkino_HG.SG: 80.2% (SE: 7.9%, Z: 10.17)
 
