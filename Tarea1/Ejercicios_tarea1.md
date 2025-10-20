@@ -1,4 +1,4 @@
-# Tarea 1 Unidad 1 -Sesión 1
+# Tarea Unidad 1 -Sesión 1
 Camilo Cabrera Garcia 25.08.2025
 --------------------------------
 Realizar los ejercicios que figuran al final del tutorial de la Sesión 1 de la Unidad 1:
