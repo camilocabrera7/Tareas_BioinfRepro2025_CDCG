@@ -1,4 +1,4 @@
-# Tarea 6 Unidad 2 -Sesión 6
+# Tarea Unidad 2 -Sesión 3
 **Camilo Cabrera y Alejandro Ahumada** 
 **15.10.2025**
 --------
