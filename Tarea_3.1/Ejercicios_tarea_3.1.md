@@ -95,7 +95,7 @@ Luego en la línea 2, se entrega la secuencia de nucleótidos `GAGTTTGGAGAACATAA
 Tras esto hay un separador como línea 3 (+) y luego cómo línea 4 se expone el string de calidad `AACBAFFCFFFFGGGGGGGGGGGHGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHIIHGHGGGHHHHHHHHGGGAEGHHHHGHHHHHHHHGHHHHHHHHHHHHHHHHHHHHGGGGGGHHHHHHHGHHHHHHHHHHHGHHGHHHHHHHHHHHHHHHHHHHGHHHGHHGGHGGGGGGHHHGFHHHFHGHHHHHHGEFGEEGHHGGGGGGGGGGHGGGGHHGGGGGGGGGGGGGGGFFFFFFFFFFFFFFFF`, donde se puede observar la calidad del read.
 
    * Traducir el código de calidad para las primeras 10 bases del tercer read a valores numéricos (Q) usando la codificación entregada en clase.
-    * Mediante el siguiente script en Unix se puede extraer las primeras 10 bases del tercer read y sus carácteres de calidad para luego traducirlos a valores númericos Q, cuyo resultado se puede ver en la *[Figura 4](./images/fig4.png):
+    * Mediante el siguiente script en Unix se puede extraer las primeras 10 bases del tercer read y sus carácteres de calidad para luego traducirlos a valores númericos Q, cuyo resultado se puede ver en la *[Figura 4](./images/fig4.png)*:
 ```
 awk '
 BEGIN {
@@ -118,6 +118,7 @@ BEGIN {
     | paste - - 
 )
 ```
+![Figura 3](./images/fig4.png)
 
 #### 2. Genere un informe de calidad con FastQC para una muestra (cada estudiante una muestra distinta), para R1 y R2.
   * Mediante el siguiente script se puede generar un informe de calidad con FastQC para R1 y R2:
