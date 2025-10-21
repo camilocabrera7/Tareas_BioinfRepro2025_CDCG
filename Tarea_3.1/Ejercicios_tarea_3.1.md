@@ -72,7 +72,7 @@ CCCCCCCFFFFFGGGGGGGGGGHHHHHHHGHHHHHHGHHHHHHHHHHHHHHHHGGGGGGHHHHGGGGGHGHHHGHHHHHH
 zcat /home/bioinfo1/181004_curso_calidad_datos_NGS/fastq_raw/S4_R1.fastq.gz | sed -n '9,12p'
 ```
 Y el resultado es el observado en la *[Figura 3](./images/fig3.png)*
-![Figura 3](./images/fig1.png)
+![Figura 3](./images/fig3.png)
 
 La información entregada es la siguiente, comenzando por la línea 1, que es el identificador de lectura(ID) `@M03564:2:000000000-D29D3:1:1101:14470:1387 1:N:0:ATCACGAC+CTAATCGA`, cada elemento se describe en la siguiente tabla:
 |Etiqueta| Valor| Descripción|
