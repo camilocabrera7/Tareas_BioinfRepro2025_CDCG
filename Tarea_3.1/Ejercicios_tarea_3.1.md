@@ -118,7 +118,7 @@ BEGIN {
     | paste - - 
 )
 ```
-![Figura 3](./images/fig4.png)
+![Figura 4](./images/fig4.png)
 
 #### 2. Genere un informe de calidad con FastQC para una muestra (cada estudiante una muestra distinta), para R1 y R2.
   * Mediante el siguiente script se puede generar un informe de calidad con FastQC para R1 y R2:
@@ -170,3 +170,79 @@ En todos los casos el conteo obtenido con comandos Unix coincide exactamente con
 
 #### 6. Seleccione las 4 figuras más importantes a su criterio para analizar la calidad de la corrida, cópielas a un archivo Markdown en su repositorio y agregue su interpretación de cada figura.
    Recuerde hacer la comparación de R1 y R2 para las secuencias crudas y las secuencias podadas.
+  1. Per Base Sequence Quality:
+       * En las lecturas crudas, la calidad media por posición decae progresivamente a partir de la base ~200, más pronunciado en R2, que en R1, cómo se puede ver en las *[Figura 5](./images/fig5_1.png)* y *[Figura 6](./images/fig9_1.png)*. Tras el filtrado, los boxplots se estrechan y elevan, indicando mejor calidad uniforme en ambas direcciones como se puede observar para R1 y R2 en las *[Figura 7](./images/fig5_2.png)* y *[Figura 8](./images/fig9_2.png)*.
+
+![Figura 5](./images/fig5_1.png)
+
+*Figura 5: gráfico de calidad por secuencia de bases para R1 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 6](./images/fig9_1.png)
+
+*Figura 6: gráfico de calidad por secuencia de bases para R2 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 7](./images/fig5_2.png)
+
+*Figura 7: gráfico de calidad por secuencia de bases para R1 entregado por informe de calidad de FastQC, para los datos filtrados.*
+
+![Figura 8](./images/fig9_2.png)
+
+*Figura 8: gráfico de calidad por secuencia de bases para R2 entregado por informe de calidad de FastQC, para los datos filtrados.*
+  
+  2. Per Sequence Quality Score:
+       * La distribución de Q scores en crudo es amplia, con un pico alrededor de Q30–Q35. R2 presenta cola más larga hacia bajas calidades respecto a R1, tal como se puede observar en las *[Figuras 9](./images/fig6_1.png)* y *[Figura 10](./images/fig10_1.png)*. En datos filtrados para ambas corridas (R1 y R2) estos picos se desplazan hacia Q35–Q40, reduciendo completamente la cola baja, lo que confirma la eficacia del trimming, esto se puede ver en las *[Figura 11](./images/fig6_2.png)* y *[Figura 12](./images/fig10_2.png)*.
+    
+![Figura 9](./images/fig6_1.png)
+
+*Figura 9: gráfico de distribución de Q scores para R1 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 10](./images/fig10_1.png)
+
+*Figura 10: gráfico de distribución de Q scores para R2 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 11](./images/fig6_2.png)
+
+*Figura 11: gráfico de distribución de Q scores para R1 entregado por informe de calidad de FastQC, para los datos filtrados.*
+
+![Figura 12](./images/fig10_2.png)
+
+*Figura 12: gráfico de distribución de Q scores para R2 entregado por informe de calidad de FastQC, para los datos filtrados.*
+
+  3. Sequence Lenght Distribution
+       * Las longitudes crudas son uniformes en 251 pb tanto en R1, cómo en R2 esto se puede observar en las *[Figura 13](./images/fig7_1.png)* y *[Figura 14](./images/fig11_1.png)*. Después del filtrado, aparece un amplio rango (35–251 pb), con un pico secundario alrededor de 240–250 pb y colas que llegan hasta 35 pb. Indica que muchas lecturas se recortaron levemente, y unas pocas, severamente. Este cambio se puede ver en ambos casos R1 y R2, sin embargo más pronunciado en R2 con mayor frecuencia de secuencias con recortes grandes, estos gráficos se ven en las *[Figura 14](./images/fig7_2.png)* y *[Figura 15](./images/fig11_2.png)* respectivamente.
+
+![Figura 13](./images/fig7_1.png)
+
+*Figura 13: gráfico de distribución de largo de secuencias para R1 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 14](./images/fig11_1.png)
+
+*Figura 14: gráfico de distribución de largo de secuencias para R2 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 15](./images/fig7_2.png)
+
+*Figura 15: gráfico de distribución de largo de secuencias para R1 entregado por informe de calidad de FastQC, para los datos filtrados.*
+
+![Figura 16](./images/fig11_2.png)
+
+*Figura 16: gráfico de distribución de largo de secuencias para R2 entregado por informe de calidad de FastQC, para los datos filtrados.*
+
+  4. Adapter Content
+       * En crudo, en R1 se puede ver que hay una cantidad de ~0% de adaptador en crudo, en cambio, el contenido de adaptadores crece hacia el final de R2, alcanzando ~50% en las últimas posiciones, ambas curvas se pueden ver en la *[Figura 17](./images/fig8_1.png)* y *[Figura 18](./images/fig12_1.png)* respectivamente. Tras el filtrado, R1 no posee cambios significativos debido a lo anteriormente mencionado (*[Figura 19](./images/fig8_1.png)*) y, en cambio, en R2 el adaptador queda prácticamente eliminado (<0.5% en todo el read), demostrando que el trimming removió con éxito las secuencias de adaptador en R2(*[Figura 20](./images/fig12_2.png)*).
+
+
+![Figura 17](./images/fig8_1.png)
+
+*Figura 17: gráfico del porcentaje de adaptador a lo largo del read para R1 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 18](./images/fig12_1.png)
+
+*Figura 18: gráfico del porcentaje de adaptador a lo largo del read para R2 entregado por informe de calidad de FastQC, para los datos crudos (sin filtrar).*
+
+![Figura 19](./images/fig8_2.png)
+
+*Figura 19: gráfico del porcentaje de adaptador a lo largo del read para R1 entregado por informe de calidad de FastQC, para los datos filtrados.*
+
+![Figura 20](./images/fig12_2.png)
+
+*Figura 20: gráfico del porcentaje de adaptador a lo largo del read para R2 entregado por informe de calidad de FastQC, para los datos filtrados.*
