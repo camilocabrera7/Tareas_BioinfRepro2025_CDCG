@@ -7,7 +7,7 @@ This repository authored by me is intended to keep a record of the tasks, includ
 ## Organization:
 Inside this repository, you will find folders named `/Tarea_x`. Within each of these folders, the description of the task and its solution are contained in files titled `Ejercicios_tarea_x.md`, where x is the sequential number of each weekly task.
 
-If the task requires uploading screenshots, these will be placed in a folder named `Tarea_x/images` inside the corresponding task folder.
+If the task requires uploading screenshots, these will be placed in a folder named `/images` inside the corresponding task folder. And if it's required to upload scripts theses will be placed in a folder named `/code` inside the corresponding task folder.
 
 ## Considerations:
 I carry out the solution of these tasks on a computer running Windows 11 on which I installed an Ubuntu (Linux) distribution to facilitate learning in the context of the subject and improve reproducibility in the exercises.
