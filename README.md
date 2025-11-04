@@ -19,3 +19,4 @@ La resolución de estas tareas las hago en un computador con sistema operativo W
   * ### **[Tarea 2.2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_2.2/Ejercicios_tarea_2.2.md) 07.10.2025**
   * ### **[Tarea 2.3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_2.3/Ejercicios_tarea_2.3.md) 15.10.2025**
   * ### **[Tarea 3.1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_3.1/Ejercicios_tarea_3.1.md) 20.10.2025**
+  * ### **[Tarea 3.2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_3.2/Ejercicios_tarea_3.2.md) 04.11.2025**
