@@ -72,7 +72,7 @@ Explorar un estudio real disponible en [cBioPortal](https://www.cbioportal.org) 
 
 ## 👩‍⚕️ Parte 3: Análisis clínico (15 min)
 
-1. Entra en la pestaña **Clinical Data**.  
+1. Entra en la pestaña **Clinical Data**.  ![fig7](./images/fig7.png)
 
 2. Examina las variables demográficas:
    
@@ -88,7 +88,7 @@ Explorar un estudio real disponible en [cBioPortal](https://www.cbioportal.org) 
    
    - **Mediana de edad (usando “Compare Groups → Median”):**  
      
-     > Existen 2 grupos de edad. Grupo A, cuya mediana es 42 años y Grupo B, cuya mediana es 60 años.
+     > Existen 2 grupos de edad. Grupo AO, cuya mediana es 42 años y Grupo EO, cuya mediana es 60 años.
 
 4. **Interpreta los resultados:**
    
@@ -98,7 +98,7 @@ Explorar un estudio real disponible en [cBioPortal](https://www.cbioportal.org) 
    
    - ¿Qué implicancias podría tener esa distribución para el estudio del cáncer elegido?  
      
-     > 
+     > Al no existir una predominancia por sexo o edad en base a lo observado de la mutación particular. Quiere decir que los estudios relacionados pueden ser transversales ya sea para edad o sexo.
 
 ---
 
