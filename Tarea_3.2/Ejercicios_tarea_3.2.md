@@ -94,7 +94,7 @@ Explorar un estudio real disponible en [cBioPortal](https://www.cbioportal.org) 
    
    - ¿Existe una predominancia por sexo o edad?  
      
-     >  No hay predominancia significativa al comparar edades 
+     >  No hay predominancia significativa el comparar edades, ni sexo para la mutación en particular. ![fig3](./images/fig3.png) ![fig4](./images/fig4.png) ![fig5](./images/fig5.png) ![fig6](./images/fig6.png)
    
    - ¿Qué implicancias podría tener esa distribución para el estudio del cáncer elegido?  
      
