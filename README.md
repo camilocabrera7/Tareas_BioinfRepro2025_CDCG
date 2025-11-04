@@ -1,17 +1,18 @@
-# **Repositorio Bioinformática e investigación reproducible para análisis genómicos** 
+# **"Bioinformática e investigación reproducible para análisis genómicos" Repository** 
 **Camilo Cabrera García 2-2025**
 
-## Objetivo:
-El siguiente repositorio de mi autoría está destinado a llevar un registro de las tareas, con sus ejercicios, el método de resolución que utilicé y el código que formulé para cada tarea en particular. 
+## Objective:
+This repository authored by me is intended to keep a record of the tasks, including their exercises, the solution method I used, and the code I formulated for each specific task.
 
-## Distribución:
-Dentro de este repositorio encontrarán carpetas llamadas `Tareax`, dentro de esta carpeta se encuentra la descripción de las tareas y la resolución de las mismas tituladas `Ejercicios_tareax.md` donde `x` es el número correlativo de cada tarea semanal.
-  * En caso de que la tarea requiera de subir capturas de pantalla estas serán ingresadas a una carpeta llamada `images` que se encontrará dentro de la carpeta de la tarea.
+## Organization:
+Inside this repository, you will find folders named `/Tarea_x`. Within each of these folders, the description of the task and its solution are contained in files titled `Ejercicios_tarea_x.md`, where x is the sequential number of each weekly task.
 
-## Consideraciones:
-La resolución de estas tareas las hago en un computador con sistema operativo Windows 11 al cual le instalé una distribución de Ubuntu (linux) para tener facilidad de aprendizaje en el contexto de la asignatura y mayor reproducibilidad en los ejercicios.
+If the task requires uploading screenshots, these will be placed in a folder named `images` inside the corresponding task folder.
 
-## Tareas Semanales:
+## Considerations:
+I carry out the solution of these tasks on a computer running Windows 11 on which I installed an Ubuntu (Linux) distribution to facilitate learning in the context of the subject and improve reproducibility in the exercises.
+
+## Weekly Tasks:
   * ### **[Tarea 1.1](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_1.1/Ejercicios_tarea_1.1.md) 26.08.2025**
   * ### **[Tarea 1.2](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_1.2/Ejercicios_tarea_1.2.md) 02.09.2025**
   * ### **[Tarea 1.3](https://github.com/camilocabrera7/Tareas_BioinfRepro2025_CDCG/blob/main/Tarea_1.3/Ejercicios_tarea_1.3.md) 07.09.2025**
