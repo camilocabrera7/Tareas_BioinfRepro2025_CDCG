@@ -112,7 +112,19 @@ Redacta un breve comentario (5–10 líneas) respondiendo:
 _Respuesta:_
 
 ```
-[Escribe aquí tu análisis]
+
+Las mutaciones en APC y TP53 son altamente prevalentes (>73%) en todos los grupos clínicos analizados,
+independientemente de edad o sexo. Esta distribución sugiere que estas alteraciones son eventos tempranos
+y necesarios en la oncogénesis colorrectal. El gen APC, en particular, actúa como "guardián" de
+la ruta Wnt/β-catenina, ya que, inhibe la vía y su pérdida es prácticamente universal en este tipo de cáncer.
+Como biomarcador, su presencia casi ubiquitaria limita su valor discriminatorio.
+
+En contraste, KRAS (43.9%) muestra una frecuencia más selectiva y podría ser un mejor predictor
+de respuesta a terapias dirigidas (ej. inhibidores de EGFR). La relevancia terapéutica reside en que
+los pacientes con wild-type KRAS responden mejor a anticuerpos anti-EGFR (cetuximab),
+mientras que mutantes KRAS se benefician de inhibidores de BRAF o MEK.
+Este patrón sugiere que para definir grupos terapéuticos, es más relevante el genotipo de KRAS que la presencia de APC o TP53.
+
 ```
 
 ---
