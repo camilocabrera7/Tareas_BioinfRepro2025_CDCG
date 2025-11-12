@@ -87,22 +87,73 @@ El tamaño de inserto medio fue 251.34 ± 34.43 pb, con mediana de 249 pb y rang
 ## Ejercicios Llamado de variantes:
 
 1. Seguir este tutorial con los datos de la muestra previamente elegida. Todas las muestras son de pacientes, para los cuales se sospechaba de una mutación patogénica. Se realizó una secuenciación de un panel de genes con equipamiento MiSeq.
-
-
 2. En materiales y métodos del reporte, indique el número de genes incluidos en el panel e incluya una tabla con la lista de genes (*consejo: revise el archivo regiones_blanco.bed*). Indique también la región genómica total (en pares de bases) cubierta por el panel, o sea, el tamaño de las regiones blanco (*consejo: revise su reporte qualimapReport.html*).
+  **R: El número de genes del panel son 27, se puede observar mediante el siguiente script:**
+```
+awk -F'\t' '{
+    # Extrae la columna 4
+    name = $4
+    # Divide por ":" y toma la parte 4
+    split(name, a, ":")
+    gene_part = a[4]
+    # Divide por "+" y extrae cada gen
+    split(gene_part, genes, "+")
+    for (i in genes) {
+        print genes[i]
+    }
+}' regiones_blanco.bed | sort | uniq
+```
+| #   | Gen    | #   | Gen    | #   | Gen    |
+| --- | ------ | --- | ------ | --- | ------ |
+| 1   | ABL1   | 11  | IKZF1  | 21  | PDGFRA |
+| 2   | BRAF   | 12  | IL7    | 22  | PDGFRB |
+| 3   | BRCA1  | 13  | JAK2   | 23  | PTEN   |
+| 4   | BRCA2  | 14  | JAK3   | 24  | RB1    |
+| 5   | CALR   | 15  | KIT    | 25  | SF3B1  |
+| 6   | CBL    | 16  | KRAS   | 26  | TP53   |
+| 7   | CEBPA  | 17  | MLL    | 27  | WT1    |
+| 8   | CRLF2  | 18  | MPL    |
+| 9   | EZH2   | 19  | P2RY8  |
+| 10  | FLT3   | 20  | PAX5   |
+  
+  **R: La región genómica total es de 91120 pb. Esto se puede observar directamente en el reporte (Qualimap) o mediante el siguiente script:**
+```
+awk '{sum += ($3-$2)} END {print "Total pb:", sum}' regiones_blanco.bed
+```
 
-3. Realice el filtrado de variantes con dos filtros, DP<10 y uno adicional que usted proponga.
-
+3. Realice el filtrado de variantes con dos filtros, DP<10 y uno adicional que usted proponga. **R: El filtro adicional será de DP<5**
 4. Estime cuántas variantes son eliminadas por el filtro DP<10 solamente, y cuántas por ambos filtros.
+  **R: Mediante ambos filtros se eliminan 4 variantes. Se puede calcular mediante el siguiente script:**
+```
+# Cálculo de variantes con filtro DP<10
+grep "PASS" S4_FILTERED_SNP.vcf | grep -c "^[^#]"
 
+# Cálculo de variantes con filtro DP<5
+grep "PASS" S4_FILTERED_SNP_1.vcf | grep -c "^[^#]"
+```
 5. Genere un reporte e incluya una tabla con el número de variantes detectadas totales, SNPs, e INDELs. Para cada caso, indicar el número de variantes filtradas y que pasaron los filtros (solo uno, y ambos)
 
-6. Visualice una variante en IGV, mostrando tracks tanto para el alineamiento (bam) como las variantes detectadas (VCF).
+| Variantes Totales  | SNPs totales   | INDELs totales | SNPs filtrados (DP<10)    | INDELs filtrados (DP<10)  | SNPs filtrados (DP<5)    | INDELs filtrados (DP<5)  |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 5   | 4   | 1   | 4   | 0   | 4   | 0   |
 
+6. Visualice una variante en IGV, mostrando tracks tanto para el alineamiento (bam) como las variantes detectadas (VCF).
 7. Asegúrese de usar un tamaño de ventana que muestre suficiente detalle como para leer la secuencia de referencia, pero sin un zoom excesivo para que se logre ver algo de contexto de secuencia. Ojalá que se vean otras variantes al rededor de la central. Incluya un track con los genes. Si no se ve ningún gen cercano a la variante, elija otra variante.
+
+![Fig5](./images/fig5.png)
 
 8. En resultados, indique en formato de tabla el número de variantes detectadas según ubicación (intrónica, río arriba, río abajo, codificante con cambio de sentido, sin sentido, etc).
 
+| Gen  | Cromosoma | Posición | Tipo  | Cambio    | Ubicación  | Relevancia Clínica | dbSNP     |
+| ---- | --------- | -------- | ----- | --------- | ---------- | ------------------ | --------- |
+| TP53 | chr19     | 17937736 | SNP   | A→T       | Río arriba | Muy Alta           | -         |
+| TP53 | chr19     | 17951178 | SNP   | G→A       | Splicing   | Muy Alta           | rs3212741 |
+| TP53 | chr19     | 17952185 | SNP   | G→T       | Splicing   | Muy Alta           | rs3212733 |
+| TP53 | chr19     | 17952609 | SNP   | T→G       | Splicing   | Muy Alta           | rs3212730 |
+| JAK3 | chr19     | 33792731 | INDEL | G→GGCGGGT | Intrónica  | Media              | -         |
+
 9. Realice una anotación de las variantes con la herramienta en línea [VEP](https://grch37.ensembl.org/info/docs/tools/vep/index.html). Asegúrese de usar la versión del genoma que utilizó en el alineamiento. Incluya anotaciones de Significancia clínica y puntajes CADD. Baje la tabla de variantes anotadas en formato TXT y fíltrela (por ejemplo en R) para generar una tabla que solo contenga variantes con un valor distinto a "benign" en la columna "CLIN_SIG" o un valor de CAAD > 20. Incluya incluya la tabla filtrada en su informe (si hubo variantes que pasaron los filtros) e interprete sus resultados.
 
+
 10. En la sección conclusiones, asegúrese de concluir algo sobre la muestra (presencia o no de mutaciones con potencial patogénico).
+
