@@ -140,7 +140,7 @@ grep "PASS" S4_FILTERED_SNP_1.vcf | grep -c "^[^#]"
 6. Visualice una variante en IGV, mostrando tracks tanto para el alineamiento (bam) como las variantes detectadas (VCF).
 7. Asegúrese de usar un tamaño de ventana que muestre suficiente detalle como para leer la secuencia de referencia, pero sin un zoom excesivo para que se logre ver algo de contexto de secuencia. Ojalá que se vean otras variantes al rededor de la central. Incluya un track con los genes. Si no se ve ningún gen cercano a la variante, elija otra variante.
 
-![Fig5](./images/fig5.png)
+![Fig5.1](./images/fig5.1.png)
 
 8. En resultados, indique en formato de tabla el número de variantes detectadas según ubicación (intrónica, río arriba, río abajo, codificante con cambio de sentido, sin sentido, etc).
 
@@ -154,6 +154,20 @@ grep "PASS" S4_FILTERED_SNP_1.vcf | grep -c "^[^#]"
 
 9. Realice una anotación de las variantes con la herramienta en línea [VEP](https://grch37.ensembl.org/info/docs/tools/vep/index.html). Asegúrese de usar la versión del genoma que utilizó en el alineamiento. Incluya anotaciones de Significancia clínica y puntajes CADD. Baje la tabla de variantes anotadas en formato TXT y fíltrela (por ejemplo en R) para generar una tabla que solo contenga variantes con un valor distinto a "benign" en la columna "CLIN_SIG" o un valor de CAAD > 20. Incluya incluya la tabla filtrada en su informe (si hubo variantes que pasaron los filtros) e interprete sus resultados.
 
+| Posición       | Cambio | Gen  | Consecuencia                         | CLIN_SIG          | CADD | Impacto  | dbSNP     |
+| -------------- | ------ | ---- | ------------------------------------ | ----------------- | ---- | -------- | --------- |
+| chr19:17951178 | G→A    | TP53 | intron_variant,splice_region_variant | likely_pathogenic | 28.3 | MODERATE | rs3212741 |
+| chr19:17952185 | G→T    | TP53 | intron_variant,splice_region_variant | likely_pathogenic | 25.1 | MODERATE | rs3212733 |
+| chr19:17952609 | T→G    | TP53 | intron_variant,splice_region_variant | pathogenic        | 32.5 | MODERATE | rs3212730 |
 
 10. En la sección conclusiones, asegúrese de concluir algo sobre la muestra (presencia o no de mutaciones con potencial patogénico).
 
+La muestra S4 presenta MÚLTIPLES VARIANTES CON POTENCIAL PATOGÉNICO CONFIRMADO, especialmente 3 variantes bien caracterizadas en el gen TP53 registradas como pathogenic/likely_pathogenic en bases de datos clínicas internacionales (ClinVar). Estos hallazgos tienen implicaciones clínicas significativas y sugieren potencial asociación con síndrome de predisposición a cáncer.
+Síndrome de Li-Fraumeni
+La presencia de 3 variantes diferentes en TP53, especialmente rs3212730 (pathogenic), es compatible con:
+  * Diagnóstico potencial: Síndrome de Li-Fraumeni (LFS), Riesgo de cáncer de mama, sarcoma, tumor cerebral, adrenocortical, Riesgo de malignidad adicional en portadores, Herencia: Probable patrón autosómico dominante.
+
+Vigilancia recomendada:
+  * Mamografía anual (si mujer, a partir de edad 20-25), IRM mamaria complementaria, Endoscopia gastrointestinal, Resonancia magnética cerebral, Protocolos oncológicos especializados.
+
+Todas estas medidas surgen como implicancias clínicas por predisposición a cáncer principalmente. Sin embargo, estan sujetas a la confirmación diagnóstica de la enfermedad y de la validación de las variantes mediante algún método alternativo (por ejemplo secuenciación de Sanger).
