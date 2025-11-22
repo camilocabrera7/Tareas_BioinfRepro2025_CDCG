@@ -135,3 +135,5 @@ Al analizar las variantes mediante la herramienta gnomAD, la variante `5:6847124
 > **Conclusión: Es benigna. Polimorfismo común sin impacto clínico.**
 
 ## Conclusiones
+
+De las variantes analizadas mediante bases de datos y predicción por Ensembl al discernir mediante guías de interpretación clínica no se observaron variantes con efecto significativo dentro del efecto. Esto puede deberse al pequeño segmento que se está evaluando del cromosoma 5, por lo que, para hacer herramientas diagnósticas o de investigación la secuenciación debería ser con un barrido más completo para determinar variantes de significancia clínica y oncológica.
