@@ -108,7 +108,7 @@ El siguiente punto importante para filtrar es la frecuencia, donde se buscan var
 
 Al analizar las variantes mediante la herramienta gnomAD, la variante `5:68695940 T>G` se trata de una variante missense, lo que puede llegar a tener un efecto, sin embargo tiene alta frecuencia en gnomAD lo que da el indicio de que es probable que sea benigna la variante. 
 
-![](./images/fig13.png)
+![](./images/fig13_1.png)
 
 *Figura 13: Búsqueda de la variante `5:68695940 T>G` en base de datos gnomAD*
 
@@ -122,7 +122,7 @@ Al analizar las variantes mediante la herramienta gnomAD, la variante `5:6869594
 
 Al analizar las variantes mediante la herramienta gnomAD, la variante `5:68471247 G>A` se trata de una variante sinonima y además, tiene alta frecuencia en gnomAD lo que da el indicio de que es altamente probable que sea benigna la variante. 
 
-![](./images/fig14.png)
+![](./images/fig14_1.png)
 
 *Figura 14: Búsqueda de la variante `5:68471247 G>A` en base de datos gnomAD*
 
