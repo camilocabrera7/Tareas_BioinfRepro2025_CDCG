@@ -5,8 +5,45 @@
 ---------------------------------
 
 ## 1. Introducción
+En el siguiente informe se hizo uso del pipeline nf-core/sarek para detectar variantes germinales y somáticas a partir de lecturas de secuenciación de muestras tumorales (En este caso `S4`). El objetivo principal del tutorial y tarea fue ejecutar pipeline de análisis geerminal y somático, comparar ambos conjuntos de variantes. Investigar la relevancia biológica y clínica de las variantes identificadas usando bases de datos cómo OncoKB (somáticas) y gnomAD (germinales).
 
 ## 2. Metodología
+Todos los análisis fueron realizados en el servidor `bioinfo1` (entorno Linux) utilizando el pipeline nf-core/sarek, ejecutado mediante Nextflow y Singularity. Para realizar los análisis se utilizó la muestra `S4`, donde sus archivos fasta correspondientes son:
+
+> **S4_R1.fastq.gz**
+
+> **S4_R2.fastq.gz**
+
+Ambos scripts se utilizaron según lo descrito en el tutorial sarek, con la única salvedad que se modificaron el input de los archivos fasta y el output de los resultados, aquí se puede ver el código del [script sarek_germinal.sh](./codes/sarek_germinal.sh) y aquí se puede ver el código del [script sarek_somatic.sh](./codes/sarek_somatic.sh).
+
+Para el presente informe los comandos se realizaron de la siguiente forma:
+```
+bash sarek_germinal.sh S4_R1.fastq.gz S4_R2.fastq.gz ../results
+bash sarek_somatic.sh S4_R1.fastq.gz S4_R2.fastq.gz ../results
+```
+
+Una vez ejecutados los scripts se puede observar la siguiente distribución de carpetas. El análisis germinal se realizó en la siguiente ruta:
+```
+/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/results/germinal_S4/
+└── variant_calling/haplotypecaller/S4/
+    ├── S4.haplotypecaller.filtered.vcf.gz      ← USADO
+    ├── S4.haplotypecaller.filtered.vcf.gz.tbi
+    ├── S4.haplotypecaller.vcf.gz              
+    └── S4.haplotypecaller.vcf.gz.tbi
+```
+El análisis somático se realizó en la siguiente ruta:
+
+```
+/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/results/somatic_S4/
+└── variant_calling/mutect2/S4/
+    ├── S4.mutect2.filtered.vcf.gz              ← USADO
+    ├── S4.mutect2.filtered.vcf.gz.tbi
+    ├── S4.mutect2.vcf.gz                       
+    ├── S4.mutect2.contamination.table
+    ├── S4.mutect2.segmentation.table
+    └── S4.mutect2.pileups.table
+```
+
 
 ## 3. Resultados Germinales
 El análisis de variantes germinales se realizó utilizando **nf-core/sarek con HaplotypeCaller**. Se procesó la muestra S4 y se filtraron variantes de baja calidad según los estándares de GATK. El análisis produjo 124 variantes de alta confianza en el VCF filtrado de HaplotypeCaller (filtro PASS en todas las entradas).
