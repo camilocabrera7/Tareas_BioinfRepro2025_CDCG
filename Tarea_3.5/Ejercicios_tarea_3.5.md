@@ -8,7 +8,8 @@
 En el siguiente informe se hizo uso del pipeline nf-core/sarek para detectar variantes germinales y somáticas a partir de lecturas de secuenciación de muestras tumorales (En este caso `S4`). El objetivo principal del tutorial y tarea fue ejecutar pipeline de análisis geerminal y somático, comparar ambos conjuntos de variantes. Investigar la relevancia biológica y clínica de las variantes identificadas usando bases de datos cómo OncoKB (somáticas) y gnomAD (germinales).
 
 ## 2. Metodología
-Todos los análisis fueron realizados en el servidor `bioinfo1` (entorno Linux) utilizando el pipeline nf-core/sarek, ejecutado mediante Nextflow y Singularity. Para realizar los análisis se utilizó la muestra `S4`, donde sus archivos fasta correspondientes son:
+Todos los análisis fueron realizados en el servidor `bioinfo1` (entorno Linux) utilizando el pipeline nf-core/sarek, ejecutado mediante Nextflow y Singularity. En el presente repositorio se encontrarán los archivos en la siguiente ruta de [results](./results/).
+Para realizar los análisis se utilizó la muestra `S4`, donde sus archivos fasta correspondientes son:
 
 > **S4_R1.fastq.gz**
 
@@ -189,5 +190,23 @@ FLT3 13:28035602 S/L            | FLT3  | 13:28035602  | 13:28035602        | 0.
 
 ## 7. Discusión 
 
+Los análisis realizados utilizando nf-core/sarek revelaron limitaciones de los resultados. La profundidad media de ~2-3x para variantes germinales y ~4x para somáticas es significativamente inferior a los estándares recomendados (>10x para germinal, >20x para somático en análisis clínicos). Esta baja cobertura incrementa el riesgo de falsos negativos y falsos positivos, especialmente en variantes de baja frecuencia alélica. Sin embargo, la métrica Ts/Tv de 2.28 en germinal (dentro del rango 2.0-2.5) indica excelente calidad de llamadas para SNPs, sugiriendo que **el filtrado GATK fue efectivo en eliminar artefactos**. En contraste, el análisis somático mostró Ts/Tv de 0.80 (por debajo del rango esperado 1.0-1.5), indicando sobrerrepresentación de transversiones. Esto puede reflejar: (i) daño oxidativo característico de tumores, (ii) enriquecimiento de variantes raras por baja cobertura, o (iii) artefactos de PCR durante amplificación. La detección de 185 singletons (64.2%) es consistente con heterogeneidad tumoral, pero también sugiere posibles artefactos de secuenciación.
+
+El tumor **acumuló 288 variantes somáticas contra 124 germinales**, lo que puede significar evolución clonal significativa. La proporción de indels aumentó de forma importante, **representando un aumento 3.2x en frecuencia absoluta**. Este enriquecimiento de indels en tejido tumoral es consistente con inestabilidad genómica adquirida, fenómeno común en cánceres con deficiencia en reparación de ADN. Se identificaron **aproximadamente 164 variantes somáticas únicas** (que no están presentes en la línea germinal), confirmando que la mayoría de variaciones observadas son adquiridas, no heredables. Este patrón es esperado en análisis tumor-normal, validando la especificidad del pipeline Mutect2 para variantes somáticas.
+
+Las variantes germinales de alto impacto (HIGH) fueron 5 de 15 seleccionadas (33%), mientras que las somáticas de alto impacto fueron 15 de 15 (100%). Esta diferencia refleja diferencias metodológicas de selección, pero destaca la importancia funcional de las variantes somáticas identificadas. **Todas las variantes somáticas de alto impacto (7 BRAF frameshift/splice_donor, 2 BRCA1, 1 BRCA2) son truncantes o afectan sitios críticos de splicing, prediciéndose como potencialmente patogénicas**.
+
+Las variantes somáticas en BRAF (7 variantes, todas HIGH IMPACT) constituyen un hallazgo oncológico crítico. Según OncoKB, mutaciones BRAF truncantes en melanoma clasifican como Level 1 (FDA-approved therapy) con disponibilidad de inhibidores de BRAF (vemurafenib, dabrafenib) combinados con inhibidores MEK. Este hallazgo sugiere probable melanoma u otro cáncer BRAF-positivo, con implicaciones terapéuticas inmediatas. Las variantes en BRCA1 y BRCA2 (germinales y somáticas) son relevantes para predisposición a cáncer de mama/ovario y para identificación de tumores triple-negativos susceptibles a inhibidores de PARP. La variante germinal BRCA1 17:43063953 (splice_acceptor) fue confirmada como PATHOGENIC en ClinVar, validando los hallazgos del pipeline.
+
+Del análisis de rareza en gnomAD (5 variantes germinales encontradas):
+  * KMT2A 11:118521374 (R/H): AF = 6.196e-7 (extremadamente rara, probablemente patogénica)
+  * FLT3 13:28035602 (S/L): AF = 1.053e-5 (extremadamente rara)
+  * BRCA1/2 variantes: AF > 0.33 (comunes, probablemente benignas o de baja penetrancia)
+
+Las variantes de AF extremadamente baja (<0.0001) son consistentes con variantes deletéreas bajo presión selectiva negativa. Las variantes comunes (BRCA1/2 S/G, K/R; BRCA2 V/A) sugieren polimorfismos, aunque **la presencia en genes de cáncer requiere interpretación funcional cuidadosa**. La ausencia de 10 de 15 variantes germinales en gnomAD no necesariamente implica patogenicidad—pueden ser variantes raras población-específicas o errores de secuenciación.
+
+Las 15 variantes somáticas identificadas incluyen 7 en BRAF (oncogén driver confirmado en melanoma), suponiendo un probable diagnóstico de melanoma BRAF-mutado con tratamiento dirigido disponible. Las variantes BRCA1/2 somáticas podrían indicar selección enriquecida en tumores de mama/ovario, con implicaciones para terapia con inhibidores de PARP. Las variantes germinales de alto impacto (KMT2A stop_gained, BRCA1 frameshift, JAK2 stop_gained) podrían representar predisposición genética a cáncer hematológico, requiriendo asesoramiento genético y vigilancia familiar.
 
 ## 8. Conclusiones
+
+Este análisis demuestra la utilidad del pipeline nf-core/sarek en identificación de variantes oncológicamente relevantes, pero subraya la importancia de validación experimental y análisis clínico integrado. Los hallazgos sugieren probable melanoma BRAF-mutado con opción terapéutica inmediata, junto con indicios de predisposición germinal a cánceres heredables (BRCA1/2, KMT2A). La concordancia parcial entre hallazgos VEP y bases de datos (OncoKB, ClinVar, gnomAD) refuerza la necesidad de múltiples enfoques anotación y validación en bioinformática clínica.
