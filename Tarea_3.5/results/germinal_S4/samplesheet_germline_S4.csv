@@ -1,0 +1,2 @@
+patient,sex,status,sample,lane,fastq_1,fastq_2
+S4,NA,0,S4,L1,/home/bioinfo1/181004_curso_calidad_datos_NGS/fastq_raw/S4_R1.fastq.gz,/home/bioinfo1/181004_curso_calidad_datos_NGS/fastq_raw/S4_R2.fastq.gz
