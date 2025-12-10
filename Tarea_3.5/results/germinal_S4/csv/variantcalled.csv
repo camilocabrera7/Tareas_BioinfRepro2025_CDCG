@@ -1,0 +1,2 @@
+patient,sample,variantcaller,vcf
+S4,S4,haplotypecaller,../results/germinal_S4/variant_calling/haplotypecaller/S4/S4.haplotypecaller.filtered.vcf.gz
