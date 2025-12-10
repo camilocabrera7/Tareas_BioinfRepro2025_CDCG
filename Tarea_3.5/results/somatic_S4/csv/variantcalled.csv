@@ -1,0 +1,2 @@
+patient,sample,variantcaller,vcf
+S4,S4,mutect2,../results/somatic_S4/variant_calling/mutect2/S4/S4.mutect2.filtered.vcf.gz

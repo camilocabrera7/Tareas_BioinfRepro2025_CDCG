@@ -1,0 +1,2 @@
+patient,sex,status,sample,cram,crai
+S4,NA,1,S4,../results/somatic_S4/preprocessing/markduplicates/S4/S4.md.cram,../results/somatic_S4/preprocessing/markduplicates/S4/S4.md.cram.crai
