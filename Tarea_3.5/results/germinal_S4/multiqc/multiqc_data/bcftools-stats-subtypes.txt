@@ -1,0 +1,2 @@
+Sample	A>G	A>T	C>A	C>T	G>A	G>C	G>T	T>A	T>C	T>G
+S4.haplotypecaller.filtered	7.0	3.0	9.0	20.0	17.0	2.0	7.0	4.0	22.0	4.0

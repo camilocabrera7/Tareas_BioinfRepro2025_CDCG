@@ -1,0 +1,2 @@
+Sample	Passed Filter	Low Quality	Too Many N	Low Complexity	Too Short	Too Long
+S4-L1	65512.0	1154.0	0.0	nan	0.0	0.0

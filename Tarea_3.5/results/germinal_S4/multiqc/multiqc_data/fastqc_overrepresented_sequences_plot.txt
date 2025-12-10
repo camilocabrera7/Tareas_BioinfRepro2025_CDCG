@@ -1,0 +1,3 @@
+Sample	Top overrepresented sequence	Sum of remaining overrepresented sequences
+S4-L1_1	0.5580055800558006	51.147511475114754
+S4-L1_2	0.5490054900549005	50.36750367503675

@@ -1,0 +1,13 @@
+Module	Section	Sample Name	Source
+FastQC (raw)	all_sections	S4-L1_1	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/5/S4-L1_1_fastqc.zip
+FastQC (raw)	all_sections	S4-L1_2	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/6/S4-L1_2_fastqc.zip
+FastP (Read preprocessing)	all_sections	S4-L1	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/4/S4-L1.fastp.json
+GATK4 MarkDuplicates	DuplicationMetrics	S4.md	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/7/S4.md.cram.metrics
+Samtools Flagstat	stats	S4.md	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/8/S4.md.cram.stats
+Samtools Flagstat	stats	S4.recal	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/12/S4.recal.cram.stats
+Mosdepth	genome_results	S4.md	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/10/S4.md.mosdepth.region.dist.txt
+Mosdepth	genome_results	S4.recal	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/13/S4.recal.mosdepth.region.dist.txt
+GATK4 BQSR	base_recalibrator	S4.recal.table	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/11/S4.recal.table
+Bcftools	stats	S4.haplotypecaller.filtered	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/15/S4.haplotypecaller.filtered.bcftools_stats.txt
+Vcftools	all_sections	TsTv by counts	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/16/S4.haplotypecaller.filtered.TsTv.count
+Vcftools	all_sections	TsTv by quality	/home/bioinfo1/ccabrera/Tareas_BioinfRepro2025_CDCG/Tarea_3.5/pipeline_sarek/code/work/57/296de6e3be7921a4f152310b803f6b/19/S4.haplotypecaller.filtered.TsTv.qual
