@@ -1,0 +1,2 @@
+Sample	0	1
+S4.haplotypecaller.filtered.TsTv.count	(0.0, None)	(1.0, 5.0)
