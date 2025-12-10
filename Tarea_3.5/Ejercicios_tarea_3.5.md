@@ -14,7 +14,7 @@ Todos los análisis fueron realizados en el servidor `bioinfo1` (entorno Linux) 
 
 > **S4_R2.fastq.gz**
 
-Ambos scripts se utilizaron según lo descrito en el tutorial sarek, con la única salvedad que se modificaron el input de los archivos fasta y el output de los resultados, aquí se puede ver el código del [script sarek_germinal.sh](./codes/sarek_germinal.sh) y aquí se puede ver el código del [script sarek_somatic.sh](./codes/sarek_somatic.sh).
+Ambos scripts se utilizaron según lo descrito en el tutorial sarek, con la única salvedad que se modificaron el input de los archivos fasta y el output de los resultados, aquí se puede ver el código del [script sarek_germinal.sh](./code/sarek_germinal.sh) y aquí se puede ver el código del [script sarek_somatic.sh](./code/sarek_somatic.sh).
 
 Para el presente informe los comandos se realizaron de la siguiente forma:
 ```
