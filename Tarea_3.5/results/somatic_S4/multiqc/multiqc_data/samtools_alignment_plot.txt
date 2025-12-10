@@ -1,0 +1,3 @@
+Sample	Mapped (with MQ>0)	MQ0	Unmapped
+S4.md	51306.0	1123.0	13083.0
+S4.recal	51306.0	1119.0	1465.0

@@ -1,0 +1,3 @@
+Sample	Chromosome X	Chromosome Y
+S4.md	1.0	1.0
+S4.recal	1.0	1.0

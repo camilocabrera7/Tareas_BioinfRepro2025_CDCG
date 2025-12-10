@@ -1,0 +1,2 @@
+Sample	-1.0
+S4.mutect2.filtered.TsTv.qual	1.0
