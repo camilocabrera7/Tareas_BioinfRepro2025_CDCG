@@ -128,7 +128,7 @@ Se identificaron 288 variantes somáticas mediante Mutect2. El ratio Ts/Tv de 0.
 | Multialélicas | 3 (1%)           | ✅ Normal                    |
 | Filtros QUAL  | Ninguno aplicado | ⚠️ Requiere                  |
 
-Para realizar la selección de las variantes de alto impacto se realizó la conversión del archivo `S4.mutect2.filtered.vcf.gz` a formato .txt compatible con VEP. Luego este archivo se subió a [VEP](https://www.ensembl.org/Tools/VEP) y se descargó el resultado en formato txt, de la cual se filtró mediante excel el impacto de las variantes. Las cuales son las siguientes:
+Para realizar la selección de las variantes de alto impacto se realizó la conversión del archivo `S4.mutect2.filtered.vcf.gz` a formato .txt para variantes [germinales](./data/germinal.txt) y [somáticas](./data/somatic.txt) compatible con VEP. Luego este archivo se subió a [VEP](https://www.ensembl.org/Tools/VEP) y se descargó el resultado en formato txt, de la cual se filtró mediante [excel](./data/vep_variantes.xlsx) el impacto de las variantes. Las cuales son las siguientes:
 
 | #  | Cromosoma:Posición | Gen   | Tipo              | Impacto  | Cambio AA      | Clínica                 |
 | -- | ------------------ | ----- | ----------------- | -------- | -------------- | ----------------------- |
