@@ -10,7 +10,7 @@ if(!file.exists(outdir)) {
 }
 
 #Cargado de datos
-mydata <- read.delim("../results/normdata.txt", as.is=T, row.names = NULL)
+mydata <- read.delim("../results/normdata_DEGs.txt", as.is=T, row.names = NULL)
 
 #Cambiar nombres columnas
 design <- read.csv("YChrom_design.csv")
@@ -87,4 +87,5 @@ gfit <- hclust(gd, method="ward.D")
 png(paste0(outdir,"/hclust_genes.png"), width=600, heigh=500)
 plot(gfit, hang = -1, cex = 0.8, labels = FALSE) # display dendogram
 dev.off()
+
 
