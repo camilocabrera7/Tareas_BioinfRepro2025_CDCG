@@ -130,3 +130,11 @@ Finalmente, para las sondas se realiza un clustering jerárquico, sin embargo, e
 *Figura 6: dendrograma de sondas el agrupamiento es en en base al complemento de correlación de Pearson.*
 
 En este dendrograma se pueden observar 4 grupos (corte aprox en 10 de altura), sin embargo, aquí el criterio es importante puesto que hay bifurcaciones importantes dentro de los grupos observados, lo que puede llevar a tener entre 5 y 6 clústeres dentro de las sondas.
+
+## Conclusión
+
+El análisis de clustering realizado sobre el subconjunto de genes diferencialmente expresados (DEGs) demostró ser efectivo para revelar la estructura de los datos transcriptómicos. Se puede observar una predominancia del tratamiento (castración): Tanto el análisis de particionamiento (K-means, k=5) como el jerárquico (Distancia Euclidiana) confirman que el tratamiento (Castración vs. Intacto) es el factor principal que define la variabilidad de las muestras. Los grupos biológicos tendieron a agruparse consistentemente, validando la señal biológica detectada en el análisis de expresión diferencial previo.También se observó coherencia en los perfiles de expresión, el agrupamiento de sondas mediante correlación de Pearson y K-means (k=4) permitió identificar módulos de genes co-regulados con patrones de expresión definidos, sugiriendo bloques funcionales distintos que responden a las condiciones experimentales.
+
+También es posible apreciar el efecto del submuestreo hay una observación de un clúster mixto (muestras castradas e intactas agrupadas juntas) sugiere una limitación técnica atribuible a la aleatorización del subconjunto de 5,000 sondas (presuntamente). Esto indica que, si bien el subset es suficiente para capturar tendencias generales, el análisis del set de datos completo es necesario para una resolución biológica definitiva y libre de artefactos estocásticos. 
+
+En resumen, el flujo de trabajo implementado validó la consistencia biológica de los grupos experimentales y la robustez de los DEGs seleccionados bajo criterios estrictos.
