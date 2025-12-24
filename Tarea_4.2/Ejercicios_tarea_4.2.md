@@ -79,7 +79,7 @@ clusplot(mydata2, fit$cluster, color=TRUE, shade=TRUE,
          labels=2, lines=0)
 dev.off()
 ```
-Y por ende la figura generada para mediante el análisis de componente principal sería la siguiente:
+Y por ende, la figura generada para mediante el análisis de componente principal sería la siguiente:
 
 ![](./results/Clusplot_kmeans_k4-2.png)
 
@@ -91,22 +91,42 @@ Y para el caso de las muestras (con el filtro de los genes diferencialmente expr
 
 *Figura 3: suma de cuadrados para la determinación de grupos en las muestras*
 
-Por lo tanto, bajo esta premisa se utilizaron `k=4` en los análisis debido a que la pendiente en el número 4 de grupos deja de bajar de forma pronunciada. El script de clustering sería el siguiente:
+Por lo tanto, bajo esta premisa se utilizaron `k=5` en los análisis debido a que la pendiente en el número 5 de grupos deja de bajar de forma tan pronunciada. El script de clustering sería el siguiente:
 
 ```R
-#Seleccion de grupos por metodo del codo (6 en este caso)
-fit <- kmeans(mydata3, 6)
+#Seleccion de grupos por metodo del codo (5 en este caso)
+fit <- kmeans(mydata3, 5)
 class(fit)
 cluster1 <- data.frame(data = rownames(mydata3), cluster = fit$cluster)
 
 #Creacion de figura cluster pkg
-png(paste0(outdir,"/Clusplot2_kmeans_k6.png"), width=600, heigh=500)
+png(paste0(outdir,"/Clusplot2_kmeans_k5.png"), width=600, heigh=500)
 clusplot(cluster1, fit$cluster, color=TRUE, shade=TRUE,
          labels=2, lines=0)
 dev.off()
 ```
 Y por ende la figura generada para mediante el análisis de componente principal sería la siguiente:
 
-![](./results/Clusplot_kmeans_k6-2.png)
+![](./results/Clusplot2_kmeans_k5-3.png)
 
-*Figura 2: análisis de componente principal para agrupamiento de muestras usando Kmeans*
+*Figura 4: análisis de componente principal para agrupamiento de muestras usando Kmeans*
+
+En este caso se puede observar que el grupo intervenido (castrados) `B.C` y `BY.C` por lo general tienen perfiles similares y forman grupos entre sí. En el caso de los grupos intactos `B.I` y `BY.I` forman grupos entre sí igualmente. Y tambien, se puede observar que hay un cluster entre muestras ratones castrado e intactos. Esto puede deberse a el número de grupos seleccionados para el PCA.
+
+## Clustering jerárquico
+
+Para realizar la formación de grupos de forma jerarquica, se elaboran dendogramas de las muestras usando medida euclideana (lo solicitado) como cálculo de distancia, y en el caso de las sondas, se utiliza el complemento de correlación de pearson. En el caso de las muestras, además de usar medida euclideana para separación, se utiliza la funcón `cutree()` de R para generar 5 grupos en base a lo determinado del análisis previo.
+
+![](./results/rect_hclust_samples-3.png)
+
+*Figura 5: dendrograma de muestras el agrupamiento es en base a distancia euclidiana. Cajas rojas indican los grupos en base a su cercanía.*
+
+Se puede observar que en base a este agrupamiento mediante distancia euclidiana las muestras se agrupan en su mayoría las muestras de ratones intactos entre sí y los ratones castrados entre sí. Igualmente se puede observar un grupo donde hay una muestra de raton castrado e intacto juntos, al repetirse el patrón esto puede indicar que la aleatorización de las 5000 lecturas durante el tutorial pasado lleven a que estas dos muestras sean similares en torno a su expresión diferencial.
+
+Finalmente, para las sondas se realiza un clustering jerárquico, sin embargo, en este caso se utiliza el complemento de correlación de Pearson como medida para el agrupamiento, se puede observar en la siguiente figura:
+
+![](./results/hclust_genes-2.png)
+
+*Figura 6: dendrograma de sondas el agrupamiento es en en base al complemento de correlación de Pearson.*
+
+En este dendrograma se pueden observar 4 grupos (corte aprox en 10 de altura), sin embargo, aquí el criterio es importante puesto que hay bifurcaciones importantes dentro de los grupos observados, lo que puede llevar a tener entre 5 y 6 clústeres dentro de las sondas.
