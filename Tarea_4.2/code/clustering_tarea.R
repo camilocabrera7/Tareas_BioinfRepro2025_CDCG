@@ -30,7 +30,7 @@ plot(1:15, wss, type="b", xlab="Number of Clusters",
      ylab="Within groups sum of squares") 
 dev.off()
 
-#Se escogen 4 grupos por metodo del codo
+#Seleccion de grupos por metodo del codo (4 en este caso)
 fit <- kmeans(mydata[-1], 4)
 class(fit)
 mydata2 <- data.frame(mydata, cluster = fit$cluster)
@@ -87,3 +87,4 @@ gfit <- hclust(gd, method="ward.D")
 png(paste0(outdir,"/hclust_genes.png"), width=600, heigh=500)
 plot(gfit, hang = -1, cex = 0.8, labels = FALSE) # display dendogram
 dev.off()
+
