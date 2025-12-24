@@ -37,7 +37,7 @@ mydata2 <- data.frame(mydata, cluster = fit$cluster)
 aggregate(mydata2,by=list(fit$cluster),FUN=mean)
 
 #Creacion figura cluster pkg
-png(paste0(outdir,"/Clusplot_kmeans_k54.png"), width=600, heigh=500)
+png(paste0(outdir,"/Clusplot_kmeans_k4.png"), width=600, heigh=500)
 clusplot(mydata2, fit$cluster, color=TRUE, shade=TRUE,
          labels=2, lines=0)
 dev.off()
@@ -61,7 +61,7 @@ class(fit)
 cluster1 <- data.frame(data = rownames(mydata3), cluster = fit$cluster)
 
 #Creacion de figura cluster pkg
-png(paste0(outdir,"/Clusplot2_kmeans_k5.png"), width=600, heigh=500)
+png(paste0(outdir,"/Clusplot2_kmeans_k6.png"), width=600, heigh=500)
 clusplot(cluster1, fit$cluster, color=TRUE, shade=TRUE,
          labels=2, lines=0)
 dev.off()
@@ -87,6 +87,7 @@ gfit <- hclust(gd, method="ward.D")
 png(paste0(outdir,"/hclust_genes.png"), width=600, heigh=500)
 plot(gfit, hang = -1, cex = 0.8, labels = FALSE) # display dendogram
 dev.off()
+
 
 
 
