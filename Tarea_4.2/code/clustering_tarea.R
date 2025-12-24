@@ -30,8 +30,8 @@ plot(1:15, wss, type="b", xlab="Number of Clusters",
      ylab="Within groups sum of squares") 
 dev.off()
 
-#Seleccion de grupos por metodo del codo (3 en este caso)
-fit <- kmeans(mydata[-1], 3)
+#Seleccion de grupos por metodo del codo (4 en este caso)
+fit <- kmeans(mydata[-1], 4)
 class(fit)
 mydata2 <- data.frame(mydata, cluster = fit$cluster)
 aggregate(mydata2,by=list(fit$cluster),FUN=mean)
@@ -73,11 +73,11 @@ fit2 <- hclust(d, method="ward.D")
 png(paste0(outdir,"/hclust_samples.png"), width=600, heigh=500)
 plot(fit2, hang = -1, cex = 0.8) # display dendogram
 dev.off()
-groups <- cutree(fit2, k=5) # cut tree into 5 clusters
+groups <- cutree(fit2, k=4) # cut tree into 5 clusters
 groups
 png(paste0(outdir,"/rect_hclust_samples.png"), width=600, heigh=500)
 plot(fit2, hang = -1, cex = 0.8) # display dendogram
-rect.hclust(fit2, k=5, border="red") 
+rect.hclust(fit2, k=4, border="red") 
 dev.off()
 
 
@@ -87,6 +87,7 @@ gfit <- hclust(gd, method="ward.D")
 png(paste0(outdir,"/hclust_genes.png"), width=600, heigh=500)
 plot(gfit, hang = -1, cex = 0.8, labels = FALSE) # display dendogram
 dev.off()
+
 
 
 
