@@ -1,7 +1,6 @@
 Tarea Unidad 4 - Sesion 3
 ================
-Camilo Cabrera
-30.12.2025
+## Camilo Cabrera 30.12.2025
 
 - [Introducción](#introducción)
 - [Métodos](#métodos)
@@ -511,3 +510,4 @@ El flujo de trabajo implementado permitió concluir que:
 Todos los datos crudos, tablas de expresión y visualizaciones que
 sustentan este análisis se encuentran disponibles en la carpeta
 `results/` del directorio de trabajo.
+
