@@ -44,10 +44,6 @@ Tarea Unidad 4 - Sesion 3
     mutante)](#expresión-diferencial-asociada-al-genotipo-wild-type-vs-mutante)
 - [Conclusiones](#conclusiones)
 
-``` r
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 4)
-```
-
 ## Introducción
 
 La secuenciación de ARN (**RNA-seq**) representa el estándar actual para
@@ -365,38 +361,32 @@ dev.off()
 
 ### 8.5.1 Visualización de gráficos de pseudoconteos, histogramas de valores P y P vs FDR
 
-A continuación se incluyen los gráficos generados durante el análisis
-(Paso 8):
+Del análisis anterior se obtuvieron los siguientes gráficos:
 
-``` r
-library(knitr)
+**Pseudoconteos (por medio de cultivo)**
+![](./results/pseudocounts/pair_expression_culture.png)
 
-figs_png <- c(
-  file.path(user_dir, "results", "pseudocounts", "pair_expression_culture.png"),
-  file.path(user_dir, "results", "pseudocounts", "pair_expression_genotype.png"),
-  file.path(user_dir, "results", "histograms",  "histograms_pvalue.png"),
-  file.path(user_dir, "results", "pvalue_fdr",  "pvalue_fdr.png")
-)
-# Incluir las figuras
-knitr::include_graphics(figs_png)
-```
+**Pseudoconteso (por genotipo)**
+![](./results/pseudocounts/pair_expression_genotype.png)
+
+**Distribución de pvalue**
+![](./results/histograms/histograms_pvalue.png)
+
+**Relación Pvalue vs FDR**
+![](./results/pvalue_fdr/pvalue_fdr.png)
 
 ------------------------------------------------------------------------
 
 ### 8.5.2 Resultados: expresión diferencial por medio de cultivo
 
 ``` r
-culture_path <- file.path(output_table,"table_de_genes_culture.csv")
-
-results_culture <- read.delim(
-  culture_path,
-  sep = "\t",
-  header = TRUE,
-  row.names = 1,
-  check.names = FALSE
-)
-
-head(results_culture)
+              logFC    logCPM       PValue          FDR
+Saci_1717  3.703873 11.036075 7.905020e-24 7.849685e-21
+Saci_1078  3.361133 12.065425 1.573246e-19 7.811168e-17
+Saci_2035 -2.898926  9.374041 4.461542e-13 1.476770e-10
+Saci_1952  2.393023  9.191711 1.165563e-10 2.432183e-08
+Saci_1953  2.154735 11.067516 1.224664e-10 2.432183e-08
+Saci_1226  2.378578 11.133507 4.026676e-10 6.664149e-08
 ```
 
 ------------------------------------------------------------------------
@@ -404,17 +394,13 @@ head(results_culture)
 ### 8.5.3 Resultados: expresión diferencial por genotipo
 
 ``` r
-genotype_path <- file.path(output_table,"table_de_genes_genotype.csv")
-
-results_genotype <- read.delim(
-  genotype_path,
-  sep = "\t",
-  header = TRUE,
-  row.names = 1,
-  check.names = FALSE
-)
-
-head(results_genotype)
+              logFC    logCPM       PValue          FDR
+Saci_2195  2.206850 11.092771 1.029273e-10 8.542966e-08
+Saci_2207  1.369328  9.894604 2.617151e-04 1.086118e-01
+Saci_2057 -1.143487  8.872415 5.416287e-04 1.498506e-01
+Saci_1180  1.487972  8.178501 1.139288e-03 2.364022e-01
+Saci_1894 -1.099476 12.152496 2.024716e-03 3.361029e-01
+Saci_0317 -1.245367  7.653952 4.711503e-03 5.774394e-01
 ```
 
 ------------------------------------------------------------------------
@@ -510,4 +496,5 @@ El flujo de trabajo implementado permitió concluir que:
 Todos los datos crudos, tablas de expresión y visualizaciones que
 sustentan este análisis se encuentran disponibles en la carpeta
 `results/` del directorio de trabajo.
+
 
